@@ -1,0 +1,81 @@
+name: geopic_polimi
+description: A new Flutter project.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^7.0.0
+  flutter_bloc: ^7.0.0
+  flutter_screenutil: ^4.0.2+3
+  cupertino_icons: ^1.0.2
+  shared_preferences: ^2.0.5
+  http: ^0.13.1
+  flutter_dotenv: ^3.1.0
+  fluttertoast: ^7.1.6
+  google_maps_flutter: ^2.0.1
+  sliding_up_panel: ^1.0.2
+  geolocator: ^5.0.1
+  url_launcher: ^6.0.2
+  uuid: ^2.2.2
+  equatable: ^1.2.5
+  permission_handler: ^7.0.0
+  location: ^4.1.1
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_gen_runner:
+
+
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - .env
+    - assets/images/splash.png
+    - assets/images/app_logo.jpg
+    - assets/images/logo.png
+
+  fonts:
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Lato/Lato-BlackItalic.ttf
+          weight: 900
+          style: italic
+
+        - asset: assets/fonts/Lato/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lato/Lato-BlackItalic.ttf
+          weight: 700
+          style: italic
+
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Lato/Lato-Italic.ttf
+          weight: 400
+          style: italic
+
+        - asset: assets/fonts/Lato/Lato-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Lato/Lato-LightItalic.ttf
+          weight: 300
+          style: italic
+
+        - asset: assets/fonts/Lato/Lato-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Lato/Lato-ThinItalic.ttf
+          weight: 100
+          style: italic
+
