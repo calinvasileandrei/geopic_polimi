@@ -11,12 +11,14 @@ import 'package:geopic_polimi/core/app_theme/cubit/theme_cubit.dart';
 import 'package:geopic_polimi/core/controller/browse_controller.dart';
 import 'package:geopic_polimi/core/repositories/auth_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
+import 'package:geopic_polimi/core/repositories/news_repository.dart';
 import 'package:geopic_polimi/pages/browse/bloc/browse_bloc.dart';
 import 'package:geopic_polimi/pages/category/bloc/category_bloc.dart';
 import 'package:geopic_polimi/pages/home/bloc/HomeBloc.dart';
 import 'package:geopic_polimi/pages/login/cubit/login_cubit.dart';
 import 'package:geopic_polimi/pages/login/view/login_page.dart';
 import 'package:geopic_polimi/pages/macro_category/bloc/macro_category_bloc.dart';
+import 'package:geopic_polimi/pages/news_view/bloc/news_view_bloc.dart';
 import 'package:geopic_polimi/pages/splash_screen/view/splash_screen_page.dart';
 import 'package:geopic_polimi/routing/router.dart' as router;
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,23 +34,27 @@ class AppInitializer extends StatelessWidget {
   //Defining the Repositories
   AuthRepository authRepository;
   MainRepository mainRepository;
+  NewsRepository newsRepository;
   //Defining the Blocs/Cubits
   LocationAppCubit locationAppCubit;
   HomeBloc homeBloc;
   CategoryBloc categoryBloc;
   MacroCategoryBloc macroCategoryBloc;
   BrowseBloc browseBloc;
+  NewsViewBloc newsViewBloc;
 
   AppInitializer(){
     //Repositories init
     mainRepository = MainRepository();
     authRepository = AuthRepository();
+    newsRepository = NewsRepository();
     //Bloc or Cubit init
     locationAppCubit = new LocationAppCubit(mainRepository: mainRepository);
     homeBloc = HomeBloc(mainRepository: mainRepository  ,locationAppCubit: locationAppCubit);
     categoryBloc = CategoryBloc(mainRepository: mainRepository,locationAppCubit: locationAppCubit);
     macroCategoryBloc = MacroCategoryBloc(mainRepository: mainRepository,locationAppCubit: locationAppCubit);
     browseBloc = BrowseBloc(mainRepository: mainRepository,browseController: new BrowseController(),locationAppCubit: locationAppCubit);
+    newsViewBloc = NewsViewBloc(newsRepository: newsRepository);
   }
 
   @override
@@ -75,6 +81,9 @@ class AppInitializer extends StatelessWidget {
         ),
         BlocProvider<BrowseBloc>(
           create: (context) => browseBloc,
+        ),
+        BlocProvider<NewsViewBloc>(
+          create: (context) => newsViewBloc,
         ),
       ],
       child: ScreenUtilInit(

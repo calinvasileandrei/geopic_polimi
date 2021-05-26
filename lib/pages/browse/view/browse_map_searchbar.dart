@@ -5,6 +5,7 @@ import 'package:geopic_polimi/pages/browse/bloc/browse_bloc.dart';
 class BrowseSearchBar extends StatelessWidget {
   TextEditingController _textEditingController;
 
+  ///Define the implementation for the map search bar
   @override
   Widget build(BuildContext context) {
     return TextField(

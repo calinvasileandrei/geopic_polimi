@@ -22,19 +22,28 @@ class MainRepository {
   ///Returns a list of section if error returns empty list
   Future<List<Section>> getSections(currentLocation,Position userPosition) async {
     List<Section> sections = [];
+    var sectionsResponse;
     var body = {"location": currentLocation};
     try {
-      final sectionsResponse = await http.post(
+       sectionsResponse = await http.post(
           Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/findAllStructuresByLocation"),
           headers: headers,
           body: json.encode(body));
 
       if (sectionsResponse.statusCode == 200) {
-        var parsedSections = json.decode(sectionsResponse.body) as List;
+        var parsedSections =json.decode(utf8.decode(sectionsResponse.body.codeUnits)) as List;
         List<Section> sections = parsedSections.map((section) => Section.fromMap(section,userPosition.latitude,userPosition.longitude)).toList();
         return sections;
       }
     } catch (err) {
+      if(err is FormatException){
+        try{
+          var parsedSections = json.decode(sectionsResponse.body) as List;
+          return parsedSections.map((section) => Section.fromMap(section,userPosition.latitude,userPosition.longitude)).toList();
+        }catch(err2){
+          return sections;
+        }
+      }
       return sections;
     }
     return sections;

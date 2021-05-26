@@ -18,7 +18,7 @@ class StructureCard extends StatelessWidget {
         "structureId": structure.id,
         "structure": structure,
         "heroTag": heroTag
-      }), //Navigator.of(context).push(new MaterialPageRoute(builder: (context)=>CardView(structure: structure,))),
+      }),
       child: SizedBox(
           height: ScreenUtil().screenHeight * 0.38,
           width: ScreenUtil().screenWidth * 0.55,

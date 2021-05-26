@@ -13,8 +13,6 @@ class BrowsePage extends StatefulWidget {
   _BrowsePageState createState() => _BrowsePageState();
 }
 
-//TODO: implements flutter hydratate for caching
-
 class _BrowsePageState extends State<BrowsePage> {
   MarkerId selectedMarker;
   Set<Marker> markers;
@@ -22,6 +20,7 @@ class _BrowsePageState extends State<BrowsePage> {
   LatLng initialcameraposition = LatLng(41.902782, 12.496366);
   bool isLoading = false;
 
+  ///Define the UI base on the BLOC status
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<BrowseBloc, BrowseState>(

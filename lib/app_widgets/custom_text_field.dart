@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+
+/// Define the default app text field
 class CustomTextField extends StatelessWidget {
   final double width;
   final double height;

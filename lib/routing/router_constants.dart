@@ -7,6 +7,6 @@ const String browsePageRoute = 'browse';
 const String morePageRoute = 'more';
 const String cardPageRoute = 'card';
 const String newsPageRoute = 'news';
-const String newsViewPageRoute = 'news_page';
+const String newsViewPageRoute = 'news_view';
 const String categoryPageRoute = 'category';
 const String macroCategoryPageRoute = 'macro_category';

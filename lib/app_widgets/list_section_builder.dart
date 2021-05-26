@@ -4,6 +4,7 @@ import 'package:geopic_polimi/app_widgets/section_builder.dart';
 import 'package:geopic_polimi/core/models/section.dart';
 import 'package:geopic_polimi/routing/router_constants.dart';
 
+/// Given as a parameter a list of sections create the ui to display them
 class ListSectionBuilder extends StatefulWidget {
   final List<Section> sections;
   final String location;
@@ -16,6 +17,7 @@ class ListSectionBuilder extends StatefulWidget {
 class _ListSectionBuilderState extends State<ListSectionBuilder> {
   final List<Section> sections;
   final String location;
+
   _ListSectionBuilderState(this.sections,this.location);
 
   @override
@@ -23,6 +25,7 @@ class _ListSectionBuilderState extends State<ListSectionBuilder> {
     super.initState();
   }
 
+  /// Helper method to check if the section is valid
   bool isSectionValid(section){
     if(section.name != "" && section.name != null){
       return true;
@@ -30,7 +33,7 @@ class _ListSectionBuilderState extends State<ListSectionBuilder> {
     return false;
   }
 
-
+  /// Navigation Helper method
   navigateToMacroCategoryPage(String macroCategory,location){
     Navigator.pushNamed(context, macroCategoryPageRoute,arguments: {
       "macroCategory":macroCategory,
@@ -38,8 +41,7 @@ class _ListSectionBuilderState extends State<ListSectionBuilder> {
     });
   }
 
-
-
+  /// Define the UI component
   @override
   Widget build(BuildContext context) {
     return sections.isEmpty  ?Container(

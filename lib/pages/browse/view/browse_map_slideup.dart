@@ -44,12 +44,13 @@ class BrowseSlideUp extends StatelessWidget {
             ),
           ),
           panel: Center(
-            child: Text("Opzioni Aggiuntive..."),
+            child: Text('Usa la barra di ricerca per spostarti di località in località'),
           ),
           body: _buildMap()),
     );
   }
 
+  ///Define the map ui builder for the loaded map or the loading map
   Widget _buildMap() {
     return Stack(children: [
       BrowseMap(initialcameraposition, markers, isLoading),

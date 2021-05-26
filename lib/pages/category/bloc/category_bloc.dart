@@ -8,8 +8,10 @@ import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.d
 
 import 'category_state.dart';
 
+/// Define the possible Event Status
 enum CategoryStatus { Fetch, Init,FetchFromInput}
 
+/// Define the Category Event
 class CategoryEvent{
   final Category category;
   final String location;
@@ -21,12 +23,15 @@ class CategoryEvent{
 
 
 class CategoryBloc extends Bloc<CategoryEvent,CategoryState > {
+  //Define the repository used by this BLOC
   final MainRepository mainRepository;
+
   Section section;
   final LocationAppCubit locationAppCubit;
 
   CategoryBloc({this.mainRepository,this.locationAppCubit}) : super(CategoryInitState());
 
+  ///Map an input event to some action and finally to a state
   @override
   Stream<CategoryState> mapEventToState(CategoryEvent event) async* {
     switch (event.status) {

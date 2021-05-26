@@ -12,6 +12,7 @@ import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+///Define Card Page Statefull Widget
 class CardPage extends StatefulWidget {
   final int structureId;
   final Structure structure;
@@ -28,6 +29,7 @@ class _CardPageState extends State<CardPage> {
   _CardPageState(this.structureId,this.structure,this.heroTag);
 
 
+  /// url launcher for opening the google maps
   void launchUrl(String address) async {
     String query = Uri.encodeComponent(address);
     String url = "https://www.google.com/maps/search/?api=1&query='"+query+"'";
@@ -39,8 +41,8 @@ class _CardPageState extends State<CardPage> {
     }
   }
 
+  /// Launcher for website
   void  launchWebsite(String address)async{
-
     if (await canLaunch(address)) {
       await launch(address);
     } else {
@@ -48,6 +50,7 @@ class _CardPageState extends State<CardPage> {
     }
   }
 
+  /// Emit the event to load the data on Init
   _loadData() async{
     MainRepository repo = new MainRepository();
     var _structure = await repo.getStructureByID(structureId,BlocProvider.of<LocationAppCubit>(context).positionLocation.position);
@@ -59,11 +62,13 @@ class _CardPageState extends State<CardPage> {
   @override
   void initState() {
     super.initState();
+    // if no data was passed to the widget request it from the bloc
     if(structure ==null){
       _loadData();
     }
   }
 
+  ///Define the UI when the state is Loaded
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,6 +109,7 @@ class _CardPageState extends State<CardPage> {
     );
   }
 
+  ///Define the UI fragment for the sections
   Widget section() {
     return Container(
       color: Theme.of(context).backgroundColor,
@@ -147,6 +153,7 @@ class _CardPageState extends State<CardPage> {
     );
   }
 
+  ///Define the UI fragment for the category
   Widget categorySection(){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -165,6 +172,7 @@ class _CardPageState extends State<CardPage> {
     );
   }
 
+  ///Define the UI fragment for the description
   Widget descriptionSection(){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -184,6 +192,7 @@ class _CardPageState extends State<CardPage> {
     );
   }
 
+  ///Define the UI fragment for the referral user
   Widget refferalSection(){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,7 +213,7 @@ class _CardPageState extends State<CardPage> {
     );
   }
 
-
+  ///Define the UI fragment for the info
   Widget infoSection(){
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

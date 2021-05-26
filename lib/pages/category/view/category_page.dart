@@ -6,7 +6,6 @@ import 'package:geopic_polimi/app_widgets/section_builder.dart';
 import 'package:geopic_polimi/app_widgets/simple_app_bar.dart';
 import 'package:geopic_polimi/core/models/category.dart';
 import 'package:geopic_polimi/core/models/section.dart';
-import 'package:geopic_polimi/core/app_extensions.dart';
 import 'package:geopic_polimi/pages/category/bloc/category_bloc.dart';
 import 'package:geopic_polimi/pages/category/bloc/category_state.dart';
 
@@ -22,13 +21,16 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
+  //Text Controller for the searchbar input field
   TextEditingController _textEditingController;
+  //Defines the local variables
   Section section;
   final Category category;
   final String location;
 
   _CategoryPageState(this.category, this.location);
 
+  ///On Init Emit the Init Event for the CategoryBloc
   _loadData() async {
     BlocProvider.of<CategoryBloc>(context).add(new CategoryEvent(
         status: CategoryStatus.Init, location: location, category: category));
@@ -45,6 +47,7 @@ class _CategoryPageState extends State<CategoryPage> {
     super.dispose();
   }
 
+  ///Defines the UI base on the State of the Bloc
   @override
   Widget build(BuildContext context) {
     return Scaffold(

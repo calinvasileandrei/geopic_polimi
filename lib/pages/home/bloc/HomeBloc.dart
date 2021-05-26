@@ -10,8 +10,10 @@ import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.d
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_status.dart';
 import 'HomeState.dart';
 
+/// Define the possible Event Status
 enum HomeStatus { Fetch, Init, FetchFromInput}
 
+/// Define the Home Event
 class HomeEvent{
   final String location;
   final HomeStatus status;
@@ -22,7 +24,9 @@ class HomeEvent{
 
 
 class HomeBloc extends Bloc<HomeEvent,HomeState > {
+  //Define the repository used by this BLOC
   final MainRepository mainRepository;
+
   final LocationAppCubit locationAppCubit;
 
   List<Section> sections;
@@ -30,11 +34,13 @@ class HomeBloc extends Bloc<HomeEvent,HomeState > {
   String location;
   Completer locationLoaded =new Completer();
 
+  /// Constructor
   HomeBloc({this.mainRepository,this.locationAppCubit}) : super(HomeInitState()){
     this.add(new HomeEvent(status: HomeStatus.Init, location: defaultAppPositionLocation.location));
     listenerUpdates();
   }
 
+  /// This method listen for the location changes that can occure in the application, if the location changes a new Fetch HomeEvent is emited into the stream
   listenerUpdates(){
     locationAppCubit.stream.listen((LocationAppState locationAppState) {
       if(locationAppState.status == LocationAppStatus.Loaded){
@@ -43,14 +49,14 @@ class HomeBloc extends Bloc<HomeEvent,HomeState > {
           if(!locationLoaded.isCompleted){
             locationLoaded.complete(true);
           }
-          add(new HomeEvent(status: HomeStatus.Fetch));
+          add(new HomeEvent(status: HomeStatus.Fetch,location: location));
         }
       }
     });
   }
 
 
-
+  ///Map an input event to some action and finally to a state
   @override
   Stream<HomeState> mapEventToState(HomeEvent event) async* {
     switch (event.status) {
@@ -64,7 +70,6 @@ class HomeBloc extends Bloc<HomeEvent,HomeState > {
 
       case HomeStatus.Fetch:
         try{
-
           yield HomeLoading();
           await locationLoaded.future;
           sections = await mainRepository.getSections(location,locationAppCubit.positionLocation.position);

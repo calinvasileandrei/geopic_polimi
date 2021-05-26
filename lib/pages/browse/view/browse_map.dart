@@ -11,6 +11,7 @@ class BrowseMap extends StatelessWidget {
   BrowseMap(this._initialcameraposition, this.markers,
       this.isLoading);
 
+  ///Define the Implementation of Google Map
   @override
   Widget build(BuildContext context) {
     return GoogleMap(

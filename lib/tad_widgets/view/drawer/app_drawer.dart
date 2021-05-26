@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geopic_polimi/app_widgets/logout_button.dart';
 import 'package:geopic_polimi/pages/login/cubit/login_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geopic_polimi/routing/router_constants.dart';
 
 ///App Drawer Ui
 class AppDrawer extends StatelessWidget {
@@ -15,6 +16,13 @@ class AppDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     //Define a default name
     String name = '';
+
+    /// Simple Redirect to the News View Page
+    redirect(newsSection){
+      Navigator.pushNamed(context, newsViewPageRoute,arguments:{
+        "newsSection": newsSection
+      });
+    }
 
     return Drawer(
       child: Container(
@@ -34,11 +42,11 @@ class AppDrawer extends StatelessWidget {
                               child: _buildDrawerHeader(name,context)
                           );
                         }),
-                    ListTile(leading: Icon(Icons.arrow_right), title: Text("Option1",style: Theme.of(context).textTheme.subtitle1,),onTap: ()=> {} ,),
+                    ListTile(leading: Icon(Icons.arrow_right), title: Text("News",style: Theme.of(context).textTheme.subtitle1,),onTap: ()=>  redirect('News'),),
                     Divider(),
-                    ListTile(leading: Icon(Icons.arrow_right),title: Text("Option2",style: Theme.of(context).textTheme.subtitle1,) ,onTap: ()=> {} ),
+                    ListTile(leading: Icon(Icons.arrow_right),title: Text("Comunicazioni",style: Theme.of(context).textTheme.subtitle1,) ,onTap: ()=> redirect('Comunicazioni')  ),
                     Divider(),
-                    ListTile(leading: Icon(Icons.arrow_right),title: Text("Option3",style: Theme.of(context).textTheme.subtitle1,),onTap: ()=> {} ),
+                    ListTile(leading: Icon(Icons.arrow_right),title: Text("Eventi",style: Theme.of(context).textTheme.subtitle1,),onTap: ()=> redirect('Eventi') ),
                     Divider(),
                   ]),
             ),
