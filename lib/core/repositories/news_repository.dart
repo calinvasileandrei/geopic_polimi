@@ -22,16 +22,16 @@ class NewsRepository {
       if (newsResponse.statusCode == 200) {
         var parsedNews = json.decode(utf8.decode(newsResponse.body.codeUnits)) as List;
         List<News> news = parsedNews.map((rawNews) => News.fromMap(rawNews)).toList();
-        newsSection = NewsSection(name: section,news: news);
+        newsSection = NewsSection(name: section,sectionDataList: news);
         return newsSection;
       }
 
     } catch (err) {
       print('ERR '+err.toString());
-      newsSection = NewsSection(name: section,news: []);
+      newsSection = NewsSection(name: section,sectionDataList: []);
       return newsSection;
     }
-    newsSection = NewsSection(name: section,news: []);
+    newsSection = NewsSection(name: section,sectionDataList: []);
     return newsSection;
   }
 
@@ -49,14 +49,14 @@ class NewsRepository {
       if (newsResponse.statusCode == 200) {
         var parsedNews = json.decode(utf8.decode(newsResponse.body.codeUnits)) as List;
         List<News> news = parsedNews.map((rawNews) => News.fromMap(rawNews)).toList();
-        newsSection = NewsSection(name: section,news: news);
+        newsSection = NewsSection(name: section,sectionDataList: news);
         return newsSection;
       }
     } catch (err) {
-      newsSection = NewsSection(name: section,news: []);
+      newsSection = NewsSection(name: section,sectionDataList: []);
       return newsSection;
     }
-    newsSection = NewsSection(name: section,news: []);
+    newsSection = NewsSection(name: section,sectionDataList: []);
     return newsSection;
 
   }

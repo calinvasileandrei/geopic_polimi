@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geopic_polimi/core/models/category.dart';
-import 'package:geopic_polimi/core/models/section.dart';
+import 'package:geopic_polimi/core/models/structure_section.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 
@@ -26,7 +26,7 @@ class CategoryBloc extends Bloc<CategoryEvent,CategoryState > {
   //Define the repository used by this BLOC
   final MainRepository mainRepository;
 
-  Section section;
+  StructureSection section;
   final LocationAppCubit locationAppCubit;
 
   CategoryBloc({this.mainRepository,this.locationAppCubit}) : super(CategoryInitState());
@@ -38,13 +38,13 @@ class CategoryBloc extends Bloc<CategoryEvent,CategoryState > {
       case CategoryStatus.Init:
         yield CategoryLoading();
         var structures = await mainRepository.findAllByCategory(event.category.name,event.location,locationAppCubit.positionLocation.position);
-        section = new Section(name: event.category.name,structures: structures);
+        section = new StructureSection(name: event.category.name,sectionDataList: structures);
         yield CategoryLoaded(section: section);
         break;
       case CategoryStatus.Fetch:
         yield CategoryLoading();
         var structures = await mainRepository.findAllByCategory(event.category.name,event.location,locationAppCubit.positionLocation.position);
-        section = new Section(name: event.category.name,structures: structures);
+        section = new StructureSection(name: event.category.name,sectionDataList: structures);
         yield CategoryLoaded(section: section);
         break;
       case CategoryStatus.FetchFromInput:

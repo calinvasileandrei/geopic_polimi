@@ -1,35 +1,16 @@
-import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:geopic_polimi/core/models/structure.dart';
 
-class Section {
+abstract class Section<T> {
   String name;
-  List<Structure> structures;
+  List<T> sectionDataList;
 
   Section({
     this.name,
-    this.structures,
+    this.sectionDataList,
   });
 
-  Map<String, dynamic> toMap() {
-    return {
-      'name': name,
-      'structures': structures?.map((x) => x?.toMap())?.toList(),
-    };
-  }
-
-  factory Section.fromMap(Map<String, dynamic> map,double _userLatitude,double _userLongitude) {
-    if (map == null) return null;
-
-    return Section(
-      name: map['name'],
-      structures: List<Structure>.from(
-          map['structures']?.map((x) => Structure.fromMap(x,_userLatitude,_userLongitude))),
-    );
-  }
-
   @override
-  String toString() => 'Section(name: $name, structures: $structures)';
+  String toString() => 'Section(name: $name, sectionDataList: $sectionDataList)';
 
   @override
   bool operator ==(Object o) {
@@ -37,14 +18,6 @@ class Section {
 
     return o is Section &&
         o.name == name &&
-        listEquals(o.structures, structures);
+        listEquals(o.sectionDataList, sectionDataList);
   }
-
-  @override
-  int get hashCode => name.hashCode ^ structures.hashCode;
-
-  String toJson() => json.encode(toMap());
-
-  factory Section.fromJson(String source,double _userLatitude,double _userLongitude) =>
-      Section.fromMap(json.decode(source),_userLatitude,_userLongitude);
 }

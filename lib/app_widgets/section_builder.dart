@@ -23,11 +23,11 @@ class SectionBuilder extends StatelessWidget {
       width: customWidth,
       height: customHeight,
       child: new ListView.builder(
-          itemCount: section.structures.length,
+          itemCount: section.sectionDataList.length,
           scrollDirection: customaxis!=null? customaxis: Axis.horizontal,
           physics: BouncingScrollPhysics(),
           itemBuilder: (context, index) {
-            return cardLarge? new StructureCardLarge(section.structures[index], activeHero,customHeight,heroTag): new StructureCard(section.structures[index],activeHero,heroTag);
+            return cardLarge? new StructureCardLarge(section.sectionDataList[index], activeHero,customHeight,heroTag): new StructureCard(section.sectionDataList[index],activeHero,heroTag);
           }),
     );
   }

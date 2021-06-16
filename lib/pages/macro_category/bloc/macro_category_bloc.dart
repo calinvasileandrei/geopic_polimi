@@ -6,7 +6,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:geopic_polimi/core/models/section.dart';
+import 'package:geopic_polimi/core/models/structure_section.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 import 'macro_category_state.dart';
@@ -37,7 +37,7 @@ class MacroCategoryEvent {
 /// Macro category bloc manages the detail page of a macro category.
 class MacroCategoryBloc extends Bloc<MacroCategoryEvent, MacroCategoryState> {
   //Define the section variable which will be set on State Loaded
-  Section section;
+  StructureSection section;
   //Parameters
   final MainRepository mainRepository;
   //Cubit to subscribe
@@ -56,7 +56,7 @@ class MacroCategoryBloc extends Bloc<MacroCategoryEvent, MacroCategoryState> {
         //Retrieve the data
         var structures = await mainRepository.getMacroCategoryStructures(
             event.macroCategory, event.location,locationAppCubit.positionLocation.position);
-        section = new Section(name: event.macroCategory, structures: structures);
+        section = new StructureSection(name: event.macroCategory, sectionDataList: structures);
         //Change the state to loaded with the data retrieved
         yield MacroCategoryLoaded(section: section);
         break;
@@ -68,7 +68,7 @@ class MacroCategoryBloc extends Bloc<MacroCategoryEvent, MacroCategoryState> {
         var structures = await mainRepository.getMacroCategoryStructures(
             event.macroCategory, event.location,locationAppCubit.positionLocation.position);
         section =
-        new Section(name: event.macroCategory, structures: structures);
+        new StructureSection(name: event.macroCategory, sectionDataList: structures);
         //Change the state to loaded with the data retrieved
         yield MacroCategoryLoaded(section: section);
         break;

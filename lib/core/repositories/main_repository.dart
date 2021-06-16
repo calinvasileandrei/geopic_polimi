@@ -8,6 +8,7 @@ import 'package:geopic_polimi/core/models/category.dart';
 import 'package:geopic_polimi/core/models/geopic_marker.dart';
 import 'package:geopic_polimi/core/models/section.dart';
 import 'package:geopic_polimi/core/models/structure.dart';
+import 'package:geopic_polimi/core/models/structure_section.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
@@ -20,27 +21,35 @@ class MainRepository {
   MainRepository();
 
   ///Returns a list of section if error returns empty list
-  Future<List<Section>> getSections(currentLocation,Position userPosition) async {
-    List<Section> sections = [];
+  Future<List<StructureSection>> getSections(
+      currentLocation, Position userPosition) async {
+    List<StructureSection> sections = [];
     var sectionsResponse;
     var body = {"location": currentLocation};
     try {
-       sectionsResponse = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/findAllStructuresByLocation"),
+      sectionsResponse = await http.post(
+          Uri.parse(DotEnv.env["BACKEND_URL"] +
+              "structure/findAllStructuresByLocation"),
           headers: headers,
           body: json.encode(body));
 
       if (sectionsResponse.statusCode == 200) {
-        var parsedSections =json.decode(utf8.decode(sectionsResponse.body.codeUnits)) as List;
-        List<Section> sections = parsedSections.map((section) => Section.fromMap(section,userPosition.latitude,userPosition.longitude)).toList();
-        return sections;
+        var parsedSections =
+            json.decode(utf8.decode(sectionsResponse.body.codeUnits)) as List;
+        return parsedSections
+            .map((section) => StructureSection.fromMap(
+                section, userPosition.latitude, userPosition.longitude))
+            .toList();
       }
     } catch (err) {
-      if(err is FormatException){
-        try{
+      if (err is FormatException) {
+        try {
           var parsedSections = json.decode(sectionsResponse.body) as List;
-          return parsedSections.map((section) => Section.fromMap(section,userPosition.latitude,userPosition.longitude)).toList();
-        }catch(err2){
+          return parsedSections
+              .map((section) => StructureSection.fromMap(
+                  section, userPosition.latitude, userPosition.longitude))
+              .toList();
+        } catch (err2) {
           return sections;
         }
       }
@@ -75,10 +84,8 @@ class MainRepository {
   ///Given a cityname returns the position (latitude and longitude)
   Future getPosition(String name) async {
     try {
-      var _positions =
-      await http.get(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name)
-      );
+      var _positions = await http
+          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
       if (_positions.statusCode == 200) {
         var position = json.decode(_positions.body) as List;
         if (position.isNotEmpty) {
@@ -94,10 +101,8 @@ class MainRepository {
   ///Given a partial city name returns the full name suggestion
   Future getPositionSuggestions(String name) async {
     try {
-      var _positions =
-      await http.get(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name)
-      );
+      var _positions = await http
+          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
       if (_positions.statusCode == 200) {
         var position = json.decode(_positions.body) as List;
         return position;
@@ -108,16 +113,18 @@ class MainRepository {
     return null;
   }
 
-
   ///Returns all the db structures
   Future<List<Structure>> getStructures(Position userPosition) async {
     List<Structure> structures = [];
     try {
-      final structuresRequest =
-      await http.get(Uri.parse(DotEnv.env["BACKEND_URL"] + 'structure/findAll'));
+      final structuresRequest = await http
+          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + 'structure/findAll'));
       if (structuresRequest.statusCode == 200) {
-        var parsedSection1 = json.decode(structuresRequest.body) as List;
-        structures = parsedSection1.map((i) => Structure.fromMap(i,userPosition.latitude,userPosition.longitude)).toList();
+        var parsedSection = json.decode(structuresRequest.body) as List;
+        structures = parsedSection
+            .map((section) => Structure.fromMap(
+                section, userPosition.latitude, userPosition.longitude))
+            .toList();
         return structures;
       }
     } catch (err) {
@@ -129,7 +136,7 @@ class MainRepository {
 
   ///Given a macroCategory and a location returns all the structures
   Future<List<Structure>> getMacroCategoryStructures(
-      String macroCategory, String location,Position userPosition) async {
+      String macroCategory, String location, Position userPosition) async {
     List<Structure> structures = [];
     var body = {"macroCategory": macroCategory, "location": location};
 
@@ -140,7 +147,10 @@ class MainRepository {
           body: json.encode(body));
       if (structuresRequest.statusCode == 200) {
         var parsedSection = json.decode(structuresRequest.body) as List;
-        structures = parsedSection.map((i) => Structure.fromMap(i,userPosition.latitude,userPosition.longitude)).toList();
+        structures = parsedSection
+            .map((i) => Structure.fromMap(
+                i, userPosition.latitude, userPosition.longitude))
+            .toList();
         return structures;
       }
     } catch (err) {
@@ -151,7 +161,7 @@ class MainRepository {
   }
 
   ///Given an id of a structure returns it
-  Future<Structure> getStructureByID(int id,Position userPosition) async {
+  Future<Structure> getStructureByID(int id, Position userPosition) async {
     var body = {"id": id};
 
     try {
@@ -161,7 +171,8 @@ class MainRepository {
           body: json.encode(body));
       if (structureRequest.statusCode == 200) {
         var parsedStructure = json.decode(structureRequest.body);
-        return Structure.fromMap(parsedStructure,userPosition.latitude,userPosition.longitude);
+        return Structure.fromMap(
+            parsedStructure, userPosition.latitude, userPosition.longitude);
       }
     } catch (err) {
       return null;
@@ -172,8 +183,8 @@ class MainRepository {
   ///Rerturns the description for the settings page
   Future<String> getSettingsDescription() async {
     try {
-      var response =
-      await http.get(Uri.parse(DotEnv.env["BACKEND_URL"] + "settingsdesctiption/"));
+      var response = await http
+          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "settingsdesctiption/"));
       if (response.statusCode == 200) {
         return json.decode(response.body)["description"];
       }
@@ -187,8 +198,8 @@ class MainRepository {
   Future<List<Category>> getCategories() async {
     List<Category> categories = [];
     try {
-      var response =
-      await http.get(Uri.parse(DotEnv.env["BACKEND_URL"] + "category/findAll"));
+      var response = await http
+          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "category/findAll"));
       if (response.statusCode == 200) {
         var categoriesResponse = json.decode(response.body) as List;
         categories = categoriesResponse
@@ -252,22 +263,29 @@ class MainRepository {
 
   ///Given a structure name and the user position return all the Section List with the different structures
   Future<List<Section>> findStructuresByInputName(
-      String structureName, body,Position userPosition) async {
+      String structureName, String location, Position userPosition) async {
     List<Section> sections = [];
+    var body = {
+      "location": location
+    };
+    Uri url =  Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/search/" + structureName);
     try {
       final structures = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/search/" + structureName),
+          url,
           headers: headers,
           body: json.encode(body));
       if (structures.statusCode == 200) {
         var parsedSection = json.decode(structures.body) as List;
         List<Structure> structuresList = parsedSection
-            .map((structure) => Structure.fromMap(structure,userPosition.latitude,userPosition.longitude))
+            .map((structure) => Structure.fromMap(
+                structure, userPosition.latitude, userPosition.longitude))
             .toList();
-        sections.add(new Section(name: "Ricerca", structures: structuresList));
+        sections.add(new StructureSection(
+            name: "Ricerca", sectionDataList: structuresList));
         return sections;
       }
     } catch (err) {
+      print(err);
       return sections;
     }
     return sections;
@@ -275,7 +293,7 @@ class MainRepository {
 
   ///Given a category name and a city name(location) returns a list of the structures which matches the query
   Future<List<Structure>> findAllByCategory(
-      String categoryName, String location,Position userPosition) async {
+      String categoryName, String location, Position userPosition) async {
     List<Structure> structures = [];
     var body = {"category": categoryName, "location": location};
     try {
@@ -286,7 +304,8 @@ class MainRepository {
       if (response.statusCode == 200) {
         var structuresResponse = json.decode(response.body) as List;
         structures = structuresResponse
-            .map((structure) => Structure.fromMap(structure,userPosition.latitude,userPosition.longitude))
+            .map((structure) => Structure.fromMap(
+                structure, userPosition.latitude, userPosition.longitude))
             .toList();
         return structures;
       }
@@ -297,20 +316,24 @@ class MainRepository {
   }
 
   ///Given a macroCategory/category and a location returns a the structure of that macroCategory/category in that location
-  Future<List<Section>> findAdvancedStructuresByInputName(
-      String structureName, body ,Position userPosition) async {
-    List<Section> sections = [];
+  Future<List<StructureSection>> findAdvancedStructuresByInputName(
+      String structureName, body, Position userPosition) async {
+    List<StructureSection> sections = [];
     try {
       final structures = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/findSection/" + structureName),
+          Uri.parse(DotEnv.env["BACKEND_URL"] +
+              "structure/findSection/" +
+              structureName),
           headers: headers,
           body: json.encode(body));
       if (structures.statusCode == 200) {
         var parsedSection = json.decode(structures.body) as List;
         List<Structure> structuresList = parsedSection
-            .map((structure) => Structure.fromMap(structure,userPosition.latitude,userPosition.longitude))
+            .map((structure) => Structure.fromMap(
+                structure, userPosition.latitude, userPosition.longitude))
             .toList();
-        sections.add(new Section(name: "Ricerca", structures: structuresList));
+        sections.add(new StructureSection(
+            name: "Ricerca", sectionDataList: structuresList));
         return sections;
       }
     } catch (err) {

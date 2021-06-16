@@ -19,30 +19,50 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case settingsPageRoute:
       return MaterialPageRoute(builder: (context) => SettingsPage());
     case cardPageRoute:
-      var parameters = settings.arguments as Map<String,dynamic>;
+      var parameters = settings.arguments as Map<String, dynamic>;
       var structureId = parameters["structureId"];
       var structure = parameters["structure"];
       var heroTag = parameters["heroTag"];
-      return MaterialPageRoute(builder: (context) => CardPage(structureId: structureId,structure: structure,heroTag: heroTag,));
+      return MaterialPageRoute(
+          builder: (context) => CardPage(
+                structureId: structureId,
+                structure: structure,
+                heroTag: heroTag,
+              ));
     case categoryPageRoute:
-      var parameters = settings.arguments as Map<String,dynamic>;
+      var parameters = settings.arguments as Map<String, dynamic>;
       var category = parameters["category"];
       var location = parameters["location"];
-      return MaterialPageRoute(builder: (context) => CategoryPage(category: category,location: location,));
+      return MaterialPageRoute(
+          builder: (context) => CategoryPage(
+                category: category,
+                location: location,
+              ));
     case macroCategoryPageRoute:
-      var parameters = settings.arguments as Map<String,dynamic>;
+      var parameters = settings.arguments as Map<String, dynamic>;
       var macroCategory = parameters["macroCategory"];
       var location = parameters["location"];
-      return MaterialPageRoute(builder: (context) => MacroCategoryPage(macrocategory: macroCategory,location: location,));
+      return MaterialPageRoute(
+          builder: (context) => MacroCategoryPage(
+                macrocategory: macroCategory,
+                location: location,
+              ));
     case newsPageRoute:
-      var parameters = settings.arguments as Map<String,dynamic>;
+      var parameters = settings.arguments as Map<String, dynamic>;
       var news = parameters["news"];
       var heroTag = parameters["heroTag"];
-      return MaterialPageRoute(builder: (context) => NewsPage(news: news,heroTag: heroTag,));
+      return MaterialPageRoute(
+          builder: (context) => NewsPage(
+                news: news,
+                heroTag: heroTag,
+              ));
     case newsViewPageRoute:
-      var parameters = settings.arguments as Map<String,dynamic>;
+      var parameters = settings.arguments as Map<String, dynamic>;
       var newsSection = parameters["newsSection"];
-      return MaterialPageRoute(builder: (context) => NewsViewPage(newsSection: newsSection,));
+      return MaterialPageRoute(
+          builder: (context) => NewsViewPage(
+                newsSection: newsSection,
+              ));
     default:
       return MaterialPageRoute(builder: (context) => HomePage());
   }

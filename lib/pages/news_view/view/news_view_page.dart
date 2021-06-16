@@ -84,7 +84,7 @@ class _NewsViewPageState extends State<NewsViewPage> {
                       ),
                       Expanded(
                           child: _section != null
-                              ? _section.news.isNotEmpty
+                              ? _section.sectionDataList.isNotEmpty
                               ? NewsSectionBuilder(
                             section: _section,
                             customAxis: Axis.vertical,

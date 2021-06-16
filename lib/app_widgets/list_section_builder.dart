@@ -77,7 +77,7 @@ class _ListSectionBuilderState extends State<ListSectionBuilder> {
                         ),
                       ),
                       Divider(),
-                      sections[index].structures.isNotEmpty
+                      sections[index].sectionDataList.isNotEmpty
                           ? SectionBuilder(section: sections[index],activeHero: true,cardLarge: false, customWidth: ScreenUtil().screenWidth,customHeight: (ScreenUtil().screenHeight*0.37),heroTag:"Discovery")
                           : Container(
                               height: ScreenUtil().screenHeight * 0.35,

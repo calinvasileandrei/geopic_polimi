@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class Secretary {
-  int id; //new
+  int id;
   String address;
   String email;
   String name;

@@ -22,11 +22,11 @@ class NewsSectionBuilder extends StatelessWidget {
       width: customWidth,
       height: customHeight,
       child: new ListView.builder(
-          itemCount: section.news.length,
+          itemCount: section.sectionDataList.length,
           scrollDirection: customAxis!=null? customAxis: Axis.horizontal,
           physics: BouncingScrollPhysics(),
           itemBuilder: (context, index) {
-            return new NewsCardLarge(section.news[index], activeHero,customHeight,heroTag);
+            return new NewsCardLarge(section.sectionDataList[index], activeHero,customHeight,heroTag);
           }),
     );
   }

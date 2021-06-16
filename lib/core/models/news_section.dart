@@ -1,23 +1,21 @@
 import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 import 'package:geopic_polimi/core/models/news.dart';
+import 'package:geopic_polimi/core/models/section.dart';
 
-import 'package:geopic_polimi/core/models/structure.dart';
-
-class NewsSection {
+class NewsSection implements Section<News> {
   String name;
-  List<News> news;
+  List<News> sectionDataList;
 
   NewsSection({
     this.name,
-    this.news,
+    this.sectionDataList,
   });
 
   Map<String, dynamic> toMap() {
     return {
       'name': name,
-      'news': news?.map((x) => x?.toMap())?.toList(),
+      'news': sectionDataList?.map((x) => x?.toMap())?.toList(),
     };
   }
 
@@ -26,13 +24,13 @@ class NewsSection {
 
     return NewsSection(
       name: map['name'],
-      news: List<News>.from(
+      sectionDataList: List<News>.from(
           map['news']?.map((x) => News.fromMap(x))),
     );
   }
 
   @override
-  String toString() => 'NewsSection(name: $name, news: $news)';
+  String toString() => 'NewsSection(name: $name, news: $sectionDataList)';
 
   @override
   bool operator ==(Object o) {
@@ -40,14 +38,12 @@ class NewsSection {
 
     return o is NewsSection &&
         o.name == name &&
-        listEquals(o.news, news);
+        listEquals(o.sectionDataList, sectionDataList);
   }
-
-  @override
-  int get hashCode => name.hashCode ^ news.hashCode;
 
   String toJson() => json.encode(toMap());
 
   factory NewsSection.fromJson(String source) =>
       NewsSection.fromMap(json.decode(source));
+
 }

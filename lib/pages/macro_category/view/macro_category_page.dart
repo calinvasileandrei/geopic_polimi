@@ -85,7 +85,7 @@ class _MacroCategoryPageState extends State<MacroCategoryPage> {
           _buildSearchBar(),
           Expanded(
               child: _section != null
-                  ? _section.structures.isNotEmpty
+                  ? _section.sectionDataList.isNotEmpty
                   ? SectionBuilder(
                 section: _section,
                 customaxis: Axis.vertical,
