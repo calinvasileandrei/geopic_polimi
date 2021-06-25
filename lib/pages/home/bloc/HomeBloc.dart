@@ -5,6 +5,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geopic_polimi/core/app_constants.dart';
 import 'package:geopic_polimi/core/models/category.dart';
 import 'package:geopic_polimi/core/models/section.dart';
+import 'package:geopic_polimi/core/models/structure_section.dart';
+import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_status.dart';
@@ -25,10 +27,10 @@ class HomeEvent {
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   //Define the repository used by this BLOC
-  final MainRepository mainRepository;
+  final ImplMainRepository mainRepository;
   final LocationAppCubit locationAppCubit;
 
-  List<Section> sections;
+  List<StructureSection> sections;
   List<Category> categories;
   String location;
   Completer locationLoaded = new Completer();
@@ -48,14 +50,19 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       if (locationAppState.status == LocationAppStatus.Loaded) {
         location = locationAppState.positionLocation?.location;
         if (location != null) {
-          if (!locationLoaded.isCompleted) {
-            locationLoaded.complete(true);
-          }
+          locationComplete();
           add(new HomeEvent(status: HomeStatus.Fetch, location: location));
         }
       }
     });
   }
+
+  locationComplete(){
+    if (!locationLoaded.isCompleted) {
+      locationLoaded.complete(true);
+    }
+  }
+
 
   ///Map an input event to some action and finally to a state
   @override

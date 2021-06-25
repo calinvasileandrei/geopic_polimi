@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geopic_polimi/core/models/category.dart';
 import 'package:geopic_polimi/core/models/structure_section.dart';
+import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 
@@ -24,7 +25,7 @@ class CategoryEvent{
 
 class CategoryBloc extends Bloc<CategoryEvent,CategoryState > {
   //Define the repository used by this BLOC
-  final MainRepository mainRepository;
+  final ImplMainRepository mainRepository;
 
   StructureSection section;
   final LocationAppCubit locationAppCubit;

@@ -13,6 +13,8 @@ class CategoryLoading extends CategoryState{}
 class CategoryLoaded extends CategoryState{
   final Section section;
   CategoryLoaded({this.section});
+
+  List<Object> get props =>[section];
 }
 
 class CategoryError extends CategoryState{

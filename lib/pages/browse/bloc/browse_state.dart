@@ -29,9 +29,11 @@ class BrowseLoaded extends BrowseState {
     this.selectedMarker,
     this.markers,
   });
+  List<Object> get props => [geopicMarkers,location,selectedMarker,markers];
 }
 
 class BrowseError extends BrowseState {
   final error;
   BrowseError({this.error});
+  List<Object> get props => [error];
 }

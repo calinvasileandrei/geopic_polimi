@@ -2,7 +2,9 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geopic_polimi/core/controller/browse_controller.dart';
+import 'package:geopic_polimi/core/controller/implementations/impl_browse_controller.dart';
 import 'package:geopic_polimi/core/models/geopic_marker.dart';
+import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -32,12 +34,12 @@ class BrowseEvent {
 
 class BrowseBloc extends Bloc<BrowseEvent, BrowseState> {
   //Define the repository used by this BLOC
-  final MainRepository mainRepository;
+  final ImplMainRepository mainRepository;
   //Location Cubit
   final LocationAppCubit locationAppCubit;
 
   //Controllers
-  final BrowseController browseController;
+  final ImplBrowseController browseController;
   GoogleMapController mapController;
 
   //Markers data
@@ -61,7 +63,6 @@ class BrowseBloc extends Bloc<BrowseEvent, BrowseState> {
           location = await locationAppCubit.positionLocation.location;
           geopicMarkers = await mainRepository.getAllGeoPicMarkers();
           markers = await browseController.createMarkers(geopicMarkers);
-
         }catch(err){
           yield BrowseError(error: err);
         }
@@ -122,7 +123,6 @@ class BrowseBloc extends Bloc<BrowseEvent, BrowseState> {
         yield BrowseLoading();
         try{
           location = await browseController.viewMyLocation(mapController, mainRepository);
-
           locationAppCubit.updateLocationName(location);
         }catch(err){
           yield BrowseError(error: err);

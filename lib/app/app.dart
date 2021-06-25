@@ -9,6 +9,7 @@ import 'package:geopic_polimi/core/app_constants.dart';
 import 'package:geopic_polimi/core/app_theme/app_theme.dart';
 import 'package:geopic_polimi/core/app_theme/cubit/theme_cubit.dart';
 import 'package:geopic_polimi/core/controller/browse_controller.dart';
+import 'package:geopic_polimi/core/controller/location_controller.dart';
 import 'package:geopic_polimi/core/repositories/auth_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/core/repositories/news_repository.dart';
@@ -49,7 +50,7 @@ class AppInitializer extends StatelessWidget {
     authRepository = AuthRepository();
     newsRepository = NewsRepository();
     //Bloc or Cubit init
-    locationAppCubit = new LocationAppCubit(mainRepository: mainRepository);
+    locationAppCubit = new LocationAppCubit(mainRepository: mainRepository,locationController: new LocationController(defaultAppPositionLocation));
     homeBloc = HomeBloc(mainRepository: mainRepository  ,locationAppCubit: locationAppCubit);
     categoryBloc = CategoryBloc(mainRepository: mainRepository,locationAppCubit: locationAppCubit);
     macroCategoryBloc = MacroCategoryBloc(mainRepository: mainRepository,locationAppCubit: locationAppCubit);

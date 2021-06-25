@@ -9,13 +9,16 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geopic_polimi/app/app.dart';
 import 'package:geopic_polimi/core/models/geopic_marker.dart';
+import 'package:geopic_polimi/core/models/position_location.dart';
+import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/routing/router_constants.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../app_extensions.dart';
+import 'implementations/impl_browse_controller.dart';
 
 /// BrowseController class to manage the device position permission and retriving the actual position
-class BrowseController {
+class BrowseController implements ImplBrowseController{
   // Default error Location
   final errorLocation = new LatLng(41.9027835,12.4963655);
 
@@ -36,7 +39,7 @@ class BrowseController {
 
   /// Retrive the user position and animate the Google Map managed by the controller passed as a parameter
   Future<String> viewMyLocation(
-      GoogleMapController controller, MainRepository repo) async {
+      GoogleMapController controller, ImplMainRepository repo) async {
     Position position = await garantLocationPermissions();
 
     animateCameraPosition(
@@ -71,11 +74,11 @@ class BrowseController {
         return true;
       }
 
-      var position = await repo.getPosition(namePosition);
+      PositionLocation positionResponse = await repo.getPosition(namePosition);
 
-      if (position != null) {
-        double _lat = position["latitude"];
-        double _long = position["longitude"];
+      if (positionResponse != null) {
+        double _lat = positionResponse.position.latitude;
+        double _long = positionResponse.position.longitude;
 
         try {
           animateCameraPosition(LatLng(_lat, _long), controller,false);

@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geopic_polimi/core/models/structure_section.dart';
+import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 import 'macro_category_state.dart';
@@ -39,7 +40,7 @@ class MacroCategoryBloc extends Bloc<MacroCategoryEvent, MacroCategoryState> {
   //Define the section variable which will be set on State Loaded
   StructureSection section;
   //Parameters
-  final MainRepository mainRepository;
+  final ImplMainRepository mainRepository;
   //Cubit to subscribe
   final LocationAppCubit locationAppCubit;
 

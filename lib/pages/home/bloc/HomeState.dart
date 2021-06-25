@@ -16,6 +16,7 @@ class HomeLoaded extends HomeState {
   final String location;
   final List<Category> categories;
   HomeLoaded({this.sections, this.location, this.categories});
+  List<Object> get props => [sections,location,categories];
 }
 
 class HomeError extends HomeState {

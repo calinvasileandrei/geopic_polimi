@@ -6,20 +6,23 @@
 import 'package:geolocator/geolocator.dart';
 import 'package:geopic_polimi/core/models/category.dart';
 import 'package:geopic_polimi/core/models/geopic_marker.dart';
+import 'package:geopic_polimi/core/models/position_location.dart';
 import 'package:geopic_polimi/core/models/section.dart';
 import 'package:geopic_polimi/core/models/structure.dart';
 import 'package:geopic_polimi/core/models/structure_section.dart';
+import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
 
 ///This is the main repository witch manages all the main backend interaction like retrieving the structures,categories ecc...
-class MainRepository {
+class MainRepository implements ImplMainRepository {
   //Defining the request headers
   Map<String, String> headers = {'Content-Type': 'application/json'};
 
   MainRepository();
 
+  @override
   ///Returns a list of section if error returns empty list
   Future<List<StructureSection>> getSections(
       currentLocation, Position userPosition) async {
@@ -58,6 +61,7 @@ class MainRepository {
     return sections;
   }
 
+  @override
   ///Given a position latitute and longiture return the name of the place with that coordinates
   Future<String> getPositionName(Position position) async {
     var body = {
@@ -81,15 +85,16 @@ class MainRepository {
     return "";
   }
 
+  @override
   ///Given a cityname returns the position (latitude and longitude)
-  Future getPosition(String name) async {
+  Future<PositionLocation> getPosition(String name) async {
     try {
       var _positions = await http
           .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
       if (_positions.statusCode == 200) {
         var position = json.decode(_positions.body) as List;
         if (position.isNotEmpty) {
-          return position[0];
+          return new PositionLocation(position: new Position(longitude: position[0]['longitude'],latitude: position[0]['latitude']),location: position[0]['comune']);
         }
       }
     } catch (err) {
@@ -98,8 +103,9 @@ class MainRepository {
     return null;
   }
 
+  @override
   ///Given a partial city name returns the full name suggestion
-  Future getPositionSuggestions(String name) async {
+  Future<List> getPositionSuggestions(String name) async {
     try {
       var _positions = await http
           .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
@@ -113,6 +119,7 @@ class MainRepository {
     return null;
   }
 
+  @override
   ///Returns all the db structures
   Future<List<Structure>> getStructures(Position userPosition) async {
     List<Structure> structures = [];
@@ -134,6 +141,7 @@ class MainRepository {
     return structures;
   }
 
+  @override
   ///Given a macroCategory and a location returns all the structures
   Future<List<Structure>> getMacroCategoryStructures(
       String macroCategory, String location, Position userPosition) async {
@@ -160,6 +168,7 @@ class MainRepository {
     return structures;
   }
 
+  @override
   ///Given an id of a structure returns it
   Future<Structure> getStructureByID(int id, Position userPosition) async {
     var body = {"id": id};
@@ -180,6 +189,7 @@ class MainRepository {
     return null;
   }
 
+  @override
   ///Rerturns the description for the settings page
   Future<String> getSettingsDescription() async {
     try {
@@ -194,6 +204,7 @@ class MainRepository {
     return null;
   }
 
+  @override
   ///Returns a list of all the categories
   Future<List<Category>> getCategories() async {
     List<Category> categories = [];
@@ -213,6 +224,7 @@ class MainRepository {
     return categories;
   }
 
+  @override
   ///Returns all the markers
   Future<List<GeoPicMarker>> getAllGeoPicMarkers() async {
     List<GeoPicMarker> markers = [];
@@ -235,6 +247,7 @@ class MainRepository {
     return markers;
   }
 
+  @override
   ///Returns all the markers for a specific location
   Future<List<GeoPicMarker>> getGeoPicMarkersByLocation(String location) async {
     List<GeoPicMarker> markers = [];
@@ -261,8 +274,9 @@ class MainRepository {
 
   //Search Endpoints
 
+  @override
   ///Given a structure name and the user position return all the Section List with the different structures
-  Future<List<Section>> findStructuresByInputName(
+  Future<List<StructureSection>> findStructuresByInputName(
       String structureName, String location, Position userPosition) async {
     List<Section> sections = [];
     var body = {
@@ -291,6 +305,7 @@ class MainRepository {
     return sections;
   }
 
+  @override
   ///Given a category name and a city name(location) returns a list of the structures which matches the query
   Future<List<Structure>> findAllByCategory(
       String categoryName, String location, Position userPosition) async {
@@ -315,6 +330,7 @@ class MainRepository {
     return structures;
   }
 
+  @override
   ///Given a macroCategory/category and a location returns a the structure of that macroCategory/category in that location
   Future<List<StructureSection>> findAdvancedStructuresByInputName(
       String structureName, body, Position userPosition) async {

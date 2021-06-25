@@ -1,5 +1,8 @@
+import 'package:equatable/equatable.dart';
+import 'package:geolocator/geolocator.dart';
+
 ///This class contains all the information of a position: The location name 'location' and the geolocation values 'position'
-class PositionLocation<Position, String> {
+class PositionLocation extends Equatable {
   Position position;
   String location;
 
@@ -12,4 +15,7 @@ class PositionLocation<Position, String> {
       location: json['location'],
     );
   }
+
+  @override
+  List<Object> get props => [position.latitude,position.longitude,location];
 }
