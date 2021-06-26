@@ -38,9 +38,7 @@ class AppDrawer extends StatelessWidget {
                             if(state.status == LoginStatus.Authenticated){
                               name = state.user.firstName;
                             }
-                          return DrawerHeader(
-                              child: _buildDrawerHeader(name,context)
-                          );
+                          return DrawerHeader(child: _buildDrawerHeader(name,context));
                         }),
                     ListTile(leading: Icon(Icons.arrow_right), title: Text("News",style: Theme.of(context).textTheme.subtitle1,),onTap: ()=>  redirect('News'),),
                     Divider(),

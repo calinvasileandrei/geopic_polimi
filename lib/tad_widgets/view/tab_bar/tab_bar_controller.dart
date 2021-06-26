@@ -22,8 +22,7 @@ class TabBarController extends StatefulWidget {
   _TabBarControllerState createState() => _TabBarControllerState();
 }
 
-class _TabBarControllerState extends State<TabBarController>
-    with TickerProviderStateMixin {
+class _TabBarControllerState extends State<TabBarController> with TickerProviderStateMixin {
   TabController _tabController;
   List<Widget> myTabs;
 

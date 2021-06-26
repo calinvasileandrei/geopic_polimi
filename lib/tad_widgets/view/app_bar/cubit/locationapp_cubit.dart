@@ -6,15 +6,13 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:geopic_polimi/app/app.dart';
 import 'package:geopic_polimi/core/app_constants.dart';
 import 'package:geopic_polimi/core/app_toast.dart';
 import 'package:geopic_polimi/core/controller/implementations/impl_location_controller.dart';
 import 'package:geopic_polimi/core/models/position_location.dart';
 import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_status.dart';
-
-import '../../../../main_production.dart';
-
 
 /// This type of class witch extends a Cubit class allows us to implement a powerful architecture based on stream/events
 /// We can see a cubit as a stream of data , the data is inserted into the stream with the emit of a new CubitState

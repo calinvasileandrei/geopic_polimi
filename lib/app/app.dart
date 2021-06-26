@@ -144,7 +144,12 @@ class _AppState extends State<App> with WidgetsBindingObserver {
 
         //If the user is uninitialized (Retrieving the data of the user is an async method) or the splashscreen has not finished
         if (state.status == LoginStatus.Uninitialized || activeSplashScreen) {
-          return const MaterialApp(home: SplashScreenPage());
+          return MaterialApp(
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: context.select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
+            home: SplashScreenPage(),
+          );
 
           //If the user successfully authenticated
         } else if (state.status == LoginStatus.Authenticated) {
