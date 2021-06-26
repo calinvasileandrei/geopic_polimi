@@ -54,6 +54,7 @@ class _MacroCategoryPageState extends State<MacroCategoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: SimpleAppBar(
         text: this.macroCategory,
       ),

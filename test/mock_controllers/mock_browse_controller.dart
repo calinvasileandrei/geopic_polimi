@@ -1,3 +1,8 @@
+// Copyright (c) 2021, Calin Vasile Andrei
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT.
 import 'package:geolocator/geolocator.dart';
 import 'package:geopic_polimi/core/controller/implementations/impl_browse_controller.dart';
 import 'package:geopic_polimi/core/models/geopic_marker.dart';

@@ -92,9 +92,9 @@ class MainRepository implements ImplMainRepository {
       var _positions = await http
           .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
       if (_positions.statusCode == 200) {
-        var position = json.decode(_positions.body) as List;
+        var position = json.decode(_positions.body) as List<dynamic>;
         if (position.isNotEmpty) {
-          return new PositionLocation(position: new Position(longitude: position[0]['longitude'],latitude: position[0]['latitude']),location: position[0]['comune']);
+          return new PositionLocation(position: new Position(longitude: position[0]['longitude'],latitude: position[0]['latitude']),location: name);
         }
       }
     } catch (err) {
@@ -278,7 +278,7 @@ class MainRepository implements ImplMainRepository {
   ///Given a structure name and the user position return all the Section List with the different structures
   Future<List<StructureSection>> findStructuresByInputName(
       String structureName, String location, Position userPosition) async {
-    List<Section> sections = [];
+    List<StructureSection> sections = [];
     var body = {
       "location": location
     };

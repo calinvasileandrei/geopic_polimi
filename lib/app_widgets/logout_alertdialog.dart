@@ -8,6 +8,7 @@ class LogoutAlertDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: Theme.of(context).backgroundColor,
       shape: appCardShape,
       title: Text("Attenzione",style: Theme.of(context).textTheme.subtitle2,),
       content: Text('Sei sicuro di voler uscire?',style: Theme.of(context).textTheme.bodyText1,),
@@ -27,7 +28,7 @@ class LogoutAlertDialog extends StatelessWidget {
             },
             child: Text(
               "Conferma",
-              style: TextStyle(color: Colors.black),
+              style: Theme.of(context).textTheme.bodyText1,
             )),
       ],
     );

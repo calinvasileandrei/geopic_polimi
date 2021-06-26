@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geopic_polimi/app_widgets/custom_text_field.dart';
 import 'package:geopic_polimi/core/app_shapes.dart';
 import 'package:geopic_polimi/core/repositories/main_repository.dart';
+import 'package:geopic_polimi/tad_widgets/view/app_bar/cubit/locationapp_cubit.dart';
 
 /// Custom Alert Dialog to allow the user to search for a new position by typing it, this alert dialog implements the typing suggestion
 /// to help the user to find the right place, in addition the user can set the value to 'Ovunque' which allows him to search in the entire
@@ -84,6 +86,7 @@ class _PositionAlertDialogState extends State<PositionAlertDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: Theme.of(context).backgroundColor,
       shape: RoundedRectangleBorder(borderRadius: appBorderRadius),
       title: Text("Cambia Zona",style: Theme.of(context).textTheme.headline1,),
       content: Container(
@@ -95,7 +98,21 @@ class _PositionAlertDialogState extends State<PositionAlertDialog> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 10.h),
               child: Row(
-
+                children: [
+                  IconButton(
+                      icon: Icon(Icons.my_location),
+                      onPressed: () => {
+                        BlocProvider.of<LocationAppCubit>(context).updateLocationFromPosition(),
+                        Navigator.pop(context,_controller.text)
+                      }//viewMyLocation(),
+                  ),
+                  Text('Usa la tua posizione',style: Theme.of(context).textTheme.bodyText1,),
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 10.h),
+              child: Row(
                 children: [
                   CupertinoSwitch(
                     value: posizioneOvunque,

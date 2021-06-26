@@ -26,7 +26,7 @@ class NewsCardLarge extends StatelessWidget {
               borderRadius: BorderRadius.circular(10.0),
             ),
             elevation: 3.0,
-            color: Colors.white,
+            color: Theme.of(context).backgroundColor,
             margin: EdgeInsets.all(8.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,7 +65,7 @@ class NewsCardLarge extends StatelessWidget {
                             news.title != null ?
                               news.title.length > 40 ? news.title.substring(0,40)+'...': news.title
                             : 'Senza Titolo',
-                            style: Theme.of(context).textTheme.bodyText2
+                            style: Theme.of(context).textTheme.subtitle1
                                 .copyWith(fontWeight: FontWeight.bold),
                             textAlign: TextAlign.start,
                           ),
@@ -75,7 +75,7 @@ class NewsCardLarge extends StatelessWidget {
                             scrollDirection: Axis.vertical,
                             child: news.description != null ?
                             Text(news.description.length > 120 ? news.description.substring(0,120)+'...' :news.description,
-                              style: Theme.of(context).textTheme.caption,
+                              style: Theme.of(context).textTheme.bodyText2,
                               textAlign: TextAlign.start,
                             ): Text('Nessuna descrizione',style: Theme.of(context).textTheme.caption,
                               textAlign: TextAlign.start,)

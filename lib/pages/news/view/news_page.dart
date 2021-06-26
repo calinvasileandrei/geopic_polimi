@@ -40,6 +40,7 @@ class _NewsPageState extends State<NewsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       body: news != null? CustomScrollView(
         slivers: [
           SliverAppBar(

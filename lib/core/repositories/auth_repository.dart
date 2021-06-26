@@ -10,13 +10,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
 
+import '../response_message.dart';
+
 
 ///This class manages the authentication request and local storage
 class AuthRepository {
   Map<String, String> headers = {'Content-Type': 'application/json'};
 
   ///This method execute the login if is successfully completed returns the user information
-  Future<User> authenticate({
+  Future<ResponseMessage<User>> authenticate({
     @required String email,
     @required String password,
   }) async {
@@ -33,12 +35,13 @@ class AuthRepository {
 
       if (authResponse.statusCode == 200) {
         Map<String,dynamic> bodyParsed = json.decode(authResponse.body);
-        return User.fromMapAPI(bodyParsed['user'],bodyParsed['id_token']);
+        User user = User.fromMapAPI(bodyParsed['user'],bodyParsed['id_token']);
+        return ResponseMessage(status: 200,body: user,message: 'Autenticazione riuscita!');
       }
+      return ResponseMessage(status: 401,body: null,message: 'Credenziali errata!');
     } catch (err) {
-      return null;
+      return ResponseMessage(status: 500,body: null,message: 'Abbiamo riscontrato un problema!');
     }
-    return null;
   }
 
   ///This method delete the user from the local storage

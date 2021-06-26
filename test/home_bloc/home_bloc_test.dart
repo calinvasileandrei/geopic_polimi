@@ -1,3 +1,8 @@
+// Copyright (c) 2021, Calin Vasile Andrei
+//
+// Use of this source code is governed by an MIT-style
+// license that can be found in the LICENSE file or at
+// https://opensource.org/licenses/MIT.
 import 'package:bloc_test/bloc_test.dart';
 import 'package:equatable/equatable.dart';
 import 'package:geopic_polimi/pages/home/bloc/HomeBloc.dart';

@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:geopic_polimi/core/app_toast.dart';
 import 'package:geopic_polimi/core/models/user.dart';
 import 'package:geopic_polimi/core/repositories/auth_repository.dart';
+import 'package:geopic_polimi/core/response_message.dart';
 part 'login_state.dart';
 
 ///Define the Login possible Status
@@ -46,14 +47,19 @@ class LoginCubit extends Cubit<LoginState> {
   ///Login method given an email and password
   Future<void> Login({Key key,String email,String password}) async {
     emit(LoginState(user: user, status: status, loading: true));
-    user = await authRepository.authenticate(email: email, password: password);
+    ResponseMessage<User> userResponse = await authRepository.authenticate(email: email, password: password);
 
-    if(user != null){
-      await authRepository.persistUser(user);
-      emit(LoginState(user: user,status: LoginStatus.Authenticated,loading: false));
-    }else{
-      showToastTop(message: 'Credenziali errate!',bgColor: Theme.of(navigatorKey.currentContext).backgroundColor);
-      emit(LoginState(user: null,status: LoginStatus.Unauthenticated,loading: false));
+    switch(userResponse.status){
+      case 200:{
+        await authRepository.persistUser(userResponse.body);
+        emit(LoginState(user: user,status: LoginStatus.Authenticated,loading: false));
+        break;
+      }
+      default:{
+        showToastTop(message: userResponse.message,bgColor: Theme.of(navigatorKey.currentContext).backgroundColor);
+        emit(LoginState(user: null,status: LoginStatus.Unauthenticated,loading: false));
+        break;
+      }
     }
   }
 

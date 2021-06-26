@@ -29,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
         FocusScope.of(context).requestFocus(new FocusNode());
       },
       child: Scaffold(
+        backgroundColor: Theme.of(context).backgroundColor,
         resizeToAvoidBottomInset: false,
         body: SafeArea(
           child: Container(
