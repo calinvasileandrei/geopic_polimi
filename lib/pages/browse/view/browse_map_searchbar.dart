@@ -12,7 +12,7 @@ class BrowseSearchBar extends StatelessWidget {
       onSubmitted: (textString) => textString.length >= 2
           ? BlocProvider.of<BrowseBloc>(context).add(new BrowseEvent(
         status: BrowseStatus.UpdateCameraPosition,
-        location: textString,))
+        location: textString.trim(),))
           : {},
       controller: _textEditingController,
       style: Theme.of(context).textTheme.bodyText1,

@@ -50,7 +50,7 @@ class _TabBarControllerState extends State<TabBarController> with TickerProvider
         //Defining the custom App Bar
         appBar: CustomAppBar(),
         //Defining the custom App Drawer
-        drawer: AppDrawer(),
+        drawer: new AppDrawer(),
         //Defining the shape of the Bottom Navigation Bar
         bottomNavigationBar: Container(
           decoration: containerElevationShadow(

@@ -22,7 +22,7 @@ void main() async {
   };
 
   runZonedGuarded(
-    () => runApp( AppInitializer()),
+    () => runApp(AppInitializer()),
     (error, stackTrace) => log(error.toString(), stackTrace: stackTrace),
   );
 }

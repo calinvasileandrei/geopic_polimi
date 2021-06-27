@@ -5,6 +5,7 @@
 // https://opensource.org/licenses/MIT.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:geopic_polimi/core/app_constants.dart';
 import 'package:geopic_polimi/core/app_theme/app_theme.dart';
 import 'package:geopic_polimi/core/app_theme/cubit/theme_cubit.dart';
@@ -60,6 +61,9 @@ class AppInitializer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MultiBlocProvider(
       providers: [
         BlocProvider<ThemeCubit>(
@@ -141,42 +145,28 @@ class _AppState extends State<App> with WidgetsBindingObserver {
   Widget build(BuildContext context) {
     return BlocBuilder<LoginCubit, LoginState>(
       builder: (context, state) {
-
-        //If the user is uninitialized (Retrieving the data of the user is an async method) or the splashscreen has not finished
-        if (state.status == LoginStatus.Uninitialized || activeSplashScreen) {
-          return MaterialApp(
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
-            themeMode: context.select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
-            home: SplashScreenPage(),
-          );
-
-          //If the user successfully authenticated
-        } else if (state.status == LoginStatus.Authenticated) {
-          return MaterialApp(
-            title: appName,
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
-            themeMode: context
-                .select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
-            onGenerateRoute: router.generateRoute,
-            navigatorKey: navigatorKey,
-            home: TabBarController(),
-          );
-        } else {
-          //If the user has to login
-          return MaterialApp(
-            title: appName,
-            theme: AppTheme.lightTheme,
-            darkTheme: AppTheme.darkTheme,
-            themeMode: context
-                .select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
-            onGenerateRoute: router.generateRoute,
-            navigatorKey: navigatorKey,
-            home: LoginPage(),
-          );
-        }
+        return MaterialApp(
+          title: appName,
+          theme: AppTheme.lightTheme,
+          darkTheme: AppTheme.darkTheme,
+          themeMode: context.select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
+          onGenerateRoute: router.generateRoute,
+          navigatorKey: navigatorKey,
+          home: _selectWidgetState(state),
+        );
       },
     );
+  }
+
+  Widget _selectWidgetState(LoginState state){
+    if (state.status == LoginStatus.Uninitialized || activeSplashScreen) {
+      return SplashScreenPage();
+      //If the user successfully authenticated
+    } else if (state.status == LoginStatus.Authenticated) {
+      return TabBarController();
+    } else {
+      //If the user has to login
+      return LoginPage();
+    }
   }
 }
