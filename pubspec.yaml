@@ -32,9 +32,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   bloc_test: ^8.0.2
+  flutter_launcher_icons: "^0.8.0"
   flutter_gen_runner:
 
-
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_logo.jpg"
 
 flutter:
   uses-material-design: true
