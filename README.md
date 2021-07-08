@@ -14,3 +14,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+[Contribution guidelines for this project](https://calinvasileandrei.github.io/geopic_polimi/Relazione%20prova%20finale%20Calin%20Vasile%20Andrei%20&%20Villa%20Flaminio.pdf)
+
+[embed] https://calinvasileandrei.github.io/geopic_polimi/Relazione%20prova%20finale%20Calin%20Vasile%20Andrei%20&%20Villa%20Flaminio.pdf [/embed]
+
+![cover](https://calinvasileandrei.github.io/geopic_polimi/Relazione%20prova%20finale%20Calin%20Vasile%20Andrei%20&%20Villa%20Flaminio.pdf)
+
+
+![some discription](https://calinvasileandrei.github.io/geopic_polimi/Relazione%20prova%20finale%20Calin%20Vasile%20Andrei%20&%20Villa%20Flaminio.pdf "some discription")
