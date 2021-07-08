@@ -51,6 +51,7 @@ class LoginCubit extends Cubit<LoginState> {
 
     switch(userResponse.status){
       case 200:{
+        user=userResponse.body;
         await authRepository.persistUser(userResponse.body);
         emit(LoginState(user: user,status: LoginStatus.Authenticated,loading: false));
         break;

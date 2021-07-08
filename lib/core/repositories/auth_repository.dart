@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:geopic_polimi/core/models/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import '../response_message.dart';
 
@@ -29,7 +29,7 @@ class AuthRepository {
 
     try {
       final authResponse = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "api/authenticate"),
+          Uri.parse(dotenv.env["BACKEND_URL"] + "api/authenticate"),
           headers: headers,
           body: json.encode(body));
 

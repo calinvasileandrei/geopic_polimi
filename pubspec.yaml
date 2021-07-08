@@ -11,28 +11,28 @@ dependencies:
   flutter:
     sdk: flutter
   bloc: ^7.0.0
-  flutter_bloc: ^7.0.0
-  flutter_screenutil: ^4.0.2+3
-  cupertino_icons: ^1.0.2
-  shared_preferences: ^2.0.5
-  http: ^0.13.1
-  flutter_dotenv: ^3.1.0
-  fluttertoast: ^7.1.6
-  google_maps_flutter: ^2.0.1
-  sliding_up_panel: ^1.0.2
+  flutter_bloc: ^7.0.1
+  flutter_screenutil: 5.0.0+2
+  cupertino_icons: ^1.0.3
+  shared_preferences: ^2.0.6
+  http: ^0.13.3
+  flutter_dotenv: ^5.0.0
+  fluttertoast: ^8.0.7
+  google_maps_flutter: ^2.0.6
+  sliding_up_panel: ^2.0.0+1
   geolocator: ^5.0.1
-  url_launcher: ^6.0.2
-  uuid: ^2.2.2
-  equatable: ^1.2.5
-  permission_handler: ^7.0.0
-  location: ^4.1.1
+  url_launcher: ^6.0.8
+  uuid: ^3.0.4
+  equatable: ^2.0.3
+  permission_handler: ^8.1.2
+  location: ^4.3.0
 
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   bloc_test: ^8.0.2
-  flutter_launcher_icons: "^0.8.0"
+  flutter_launcher_icons: ^0.9.0
   flutter_gen_runner:
 
 flutter_icons:

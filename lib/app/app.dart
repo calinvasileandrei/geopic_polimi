@@ -92,7 +92,6 @@ class AppInitializer extends StatelessWidget {
         ),
       ],
       child: ScreenUtilInit(
-          allowFontScaling: false,
           designSize: Size(1125, 2436),
           builder: () => const App()),
     );

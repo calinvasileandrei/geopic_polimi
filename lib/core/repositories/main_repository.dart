@@ -7,13 +7,12 @@ import 'package:geolocator/geolocator.dart';
 import 'package:geopic_polimi/core/models/category.dart';
 import 'package:geopic_polimi/core/models/geopic_marker.dart';
 import 'package:geopic_polimi/core/models/position_location.dart';
-import 'package:geopic_polimi/core/models/section.dart';
 import 'package:geopic_polimi/core/models/structure.dart';
 import 'package:geopic_polimi/core/models/structure_section.dart';
 import 'package:geopic_polimi/core/repositories/implementations/impl_main_repository.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 ///This is the main repository witch manages all the main backend interaction like retrieving the structures,categories ecc...
 class MainRepository implements ImplMainRepository {
@@ -31,7 +30,7 @@ class MainRepository implements ImplMainRepository {
     var body = {"location": currentLocation};
     try {
       sectionsResponse = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] +
+          Uri.parse(dotenv.env["BACKEND_URL"] +
               "structure/findAllStructuresByLocation"),
           headers: headers,
           body: json.encode(body));
@@ -62,7 +61,7 @@ class MainRepository implements ImplMainRepository {
   }
 
   @override
-  ///Given a position latitute and longiture return the name of the place with that coordinates
+  ///Given a position latitude and longiture return the name of the place with that coordinates
   Future<String> getPositionName(Position position) async {
     var body = {
       "latitude": position.latitude.toDouble(),
@@ -71,7 +70,7 @@ class MainRepository implements ImplMainRepository {
 
     try {
       var response = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "place/cityname"),
+          Uri.parse(dotenv.env["BACKEND_URL"] + "place/cityname"),
           headers: headers,
           body: json.encode(body));
 
@@ -90,7 +89,7 @@ class MainRepository implements ImplMainRepository {
   Future<PositionLocation> getPosition(String name) async {
     try {
       var _positions = await http
-          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
+          .get(Uri.parse(dotenv.env["BACKEND_URL"] + "place/" + name));
       if (_positions.statusCode == 200) {
         var position = json.decode(_positions.body) as List<dynamic>;
         if (position.isNotEmpty) {
@@ -108,7 +107,7 @@ class MainRepository implements ImplMainRepository {
   Future<List> getPositionSuggestions(String name) async {
     try {
       var _positions = await http
-          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "place/" + name));
+          .get(Uri.parse(dotenv.env["BACKEND_URL"] + "place/" + name));
       if (_positions.statusCode == 200) {
         var position = json.decode(_positions.body) as List;
         return position;
@@ -125,7 +124,7 @@ class MainRepository implements ImplMainRepository {
     List<Structure> structures = [];
     try {
       final structuresRequest = await http
-          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + 'structure/findAll'));
+          .get(Uri.parse(dotenv.env["BACKEND_URL"] + 'structure/findAll'));
       if (structuresRequest.statusCode == 200) {
         var parsedSection = json.decode(structuresRequest.body) as List;
         structures = parsedSection
@@ -150,7 +149,7 @@ class MainRepository implements ImplMainRepository {
 
     try {
       final structuresRequest = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + 'structure/findSection'),
+          Uri.parse(dotenv.env["BACKEND_URL"] + 'structure/findSection'),
           headers: headers,
           body: json.encode(body));
       if (structuresRequest.statusCode == 200) {
@@ -175,11 +174,11 @@ class MainRepository implements ImplMainRepository {
 
     try {
       final structureRequest = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + 'structure/findById'),
+          Uri.parse(dotenv.env["BACKEND_URL"] + 'structure/findById'),
           headers: headers,
           body: json.encode(body));
       if (structureRequest.statusCode == 200) {
-        var parsedStructure = json.decode(structureRequest.body);
+        var parsedStructure = json.decode(utf8.decode(structureRequest.body.codeUnits));
         return Structure.fromMap(
             parsedStructure, userPosition.latitude, userPosition.longitude);
       }
@@ -194,7 +193,7 @@ class MainRepository implements ImplMainRepository {
   Future<String> getSettingsDescription() async {
     try {
       var response = await http
-          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "settingsdesctiption/"));
+          .get(Uri.parse(dotenv.env["BACKEND_URL"] + "settingsdesctiption/"));
       if (response.statusCode == 200) {
         return json.decode(response.body)["description"];
       }
@@ -210,7 +209,7 @@ class MainRepository implements ImplMainRepository {
     List<Category> categories = [];
     try {
       var response = await http
-          .get(Uri.parse(DotEnv.env["BACKEND_URL"] + "category/findAll"));
+          .get(Uri.parse(dotenv.env["BACKEND_URL"] + "category/findAll"));
       if (response.statusCode == 200) {
         var categoriesResponse = json.decode(response.body) as List;
         categories = categoriesResponse
@@ -231,7 +230,7 @@ class MainRepository implements ImplMainRepository {
     var body = {};
     try {
       var response = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/markers"),
+          Uri.parse(dotenv.env["BACKEND_URL"] + "structure/markers"),
           body: json.encode(body),
           headers: headers);
       if (response.statusCode == 200) {
@@ -255,7 +254,7 @@ class MainRepository implements ImplMainRepository {
 
     try {
       var response = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/markers"),
+          Uri.parse(dotenv.env["BACKEND_URL"] + "structure/markers"),
           body: json.encode(body),
           headers: headers);
       if (response.statusCode == 200) {
@@ -282,7 +281,7 @@ class MainRepository implements ImplMainRepository {
     var body = {
       "location": location
     };
-    Uri url =  Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/search/" + structureName);
+    Uri url =  Uri.parse(dotenv.env["BACKEND_URL"] + "structure/search/" + structureName);
     try {
       final structures = await http.post(
           url,
@@ -313,7 +312,7 @@ class MainRepository implements ImplMainRepository {
     var body = {"category": categoryName, "location": location};
     try {
       var response = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] + "structure/findAllByCategory"),
+          Uri.parse(dotenv.env["BACKEND_URL"] + "structure/findAllByCategory"),
           body: json.encode(body),
           headers: headers);
       if (response.statusCode == 200) {
@@ -337,7 +336,7 @@ class MainRepository implements ImplMainRepository {
     List<StructureSection> sections = [];
     try {
       final structures = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"] +
+          Uri.parse(dotenv.env["BACKEND_URL"] +
               "structure/findSection/" +
               structureName),
           headers: headers,

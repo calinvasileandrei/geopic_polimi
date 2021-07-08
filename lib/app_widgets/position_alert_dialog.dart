@@ -86,11 +86,12 @@ class _PositionAlertDialogState extends State<PositionAlertDialog> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      contentPadding: EdgeInsets.only(left: 24,right: 24,top: 24),
       backgroundColor: Theme.of(context).backgroundColor,
       shape: RoundedRectangleBorder(borderRadius: appBorderRadius),
       title: Text("Cambia Zona",style: Theme.of(context).textTheme.headline1,),
       content: Container(
-        height: ScreenUtil().screenHeight * 0.3,
+        height: ScreenUtil().screenHeight * 0.4,
         width: ScreenUtil().screenWidth,
         child: Column(
           children: [
@@ -134,26 +135,25 @@ class _PositionAlertDialogState extends State<PositionAlertDialog> {
               ),
             ),
             Expanded(
-              child: Container(
-                child: ListView.builder(
-                  shrinkWrap: true,
-                  itemCount: _placeList.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      onTap: () => {
-                        _controller.value = TextEditingValue(
-                          text: _placeList[index]["comune"],
-                          selection: TextSelection.fromPosition(
-                            TextPosition(
-                                offset: _placeList[index]["comune"].length),
-                          ),
-                        )
-                      },
-                      title: Text(_placeList[index]["comune"],style: Theme.of(context).textTheme.bodyText1,),
-                      leading: Icon(Icons.arrow_right_outlined),
-                    );
-                  },
-                ),
+              child: ListView.builder(
+                shrinkWrap: false,
+                itemCount: _placeList.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    dense: true,
+                    onTap: () => {
+                      _controller.value = TextEditingValue(
+                        text: _placeList[index]["comune"],
+                        selection: TextSelection.fromPosition(
+                          TextPosition(
+                              offset: _placeList[index]["comune"].length),
+                        ),
+                      )
+                    },
+                    title: Text(_placeList[index]["comune"],style: Theme.of(context).textTheme.bodyText1,),
+                    leading: Icon(Icons.arrow_right_outlined),
+                  );
+                },
               ),
               
             )

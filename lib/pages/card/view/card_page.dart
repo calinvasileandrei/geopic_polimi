@@ -90,9 +90,9 @@ class _CardPageState extends State<CardPage> {
                     height: ScreenUtil().screenHeight * 0.15,
                     width: ScreenUtil().screenWidth,
                     image: NetworkImage(structure.logo),
-                    placeholder: AssetImage('assets/logo.png'),
+                    placeholder: AssetImage('assets/images/logo.png'),
                     imageErrorBuilder: (context, error, stackTrace) {
-                      return Image.asset('assets/logo.png',
+                      return Image.asset('assets/images/logo.png',
                           fit: BoxFit.fitWidth);
                     },
                   )),

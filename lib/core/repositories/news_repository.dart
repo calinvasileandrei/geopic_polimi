@@ -2,7 +2,7 @@ import 'package:geopic_polimi/core/models/news.dart';
 import 'package:geopic_polimi/core/models/news_section.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:flutter_dotenv/flutter_dotenv.dart' as DotEnv;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class NewsRepository {
   Map<String, String> headers = {'Content-Type': 'application/json'};
@@ -15,7 +15,7 @@ class NewsRepository {
     var body = {"section": section};
     try {
       final newsResponse = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"]  + "news/section"),
+          Uri.parse(dotenv.env["BACKEND_URL"]  + "news/section"),
           headers: headers,
           body: json.encode(body));
 
@@ -42,7 +42,7 @@ class NewsRepository {
     var body = {"section": section};
     try {
       final newsResponse = await http.post(
-          Uri.parse(DotEnv.env["BACKEND_URL"]  + "news/search/"+searchString),
+          Uri.parse(dotenv.env["BACKEND_URL"]  + "news/search/"+searchString),
           headers: headers,
           body: json.encode(body));
 

@@ -36,7 +36,6 @@ class NewsViewBloc extends Bloc<NewsViewEvent, NewsViewState> {
         try {
           newsSection = event.newsSection;
           section = await newsRepository.getNewsBySection(newsSection);
-          print(section);
           yield NewsLoaded(section: section);
         } catch (err) {
           yield NewsError(error: err);
