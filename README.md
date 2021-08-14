@@ -4,8 +4,7 @@
 
 Flaminio Villa & Vasile Andrei Calin \| Politecnico di Milano
 
-![](./media/image1.png){width="6.35416447944007in"
-height="1.7188024934383201in"}
+![](./media/image1.png)
 
 Geopic nasce come applicazione mobile per la gestione di convenzioni e
 sconti per esercizi commerciali.
