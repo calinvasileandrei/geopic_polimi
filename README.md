@@ -163,16 +163,13 @@ Dispone di una ricerca per categorie, per tipo di struttura e per nome
 ed una gestione relativa alla posizione in tempo reale che mostra le
 strutture convenzionate più vicine all\'utente.
 
-![](./media/image2.png){width="3.543307086614173in"
-height="6.68503937007874in"}Il pulsante in alto a destra
-![](./media/image3.png){width="0.7708333333333334in"
-height="0.27046806649168853in"} permette di cambiare la località di
+![](./media/image2.png)Il pulsante in alto a destra
+![](./media/image3.png) permette di cambiare la località di
 ricerca, è infatti possibile ricercare le strutture convenzionate di una
 determinata località , oltre a quelle vicine rispetto la posizione
 fisica del dispositivo.
 
-![](./media/image4.png){width="3.03125in"
-height="5.739583333333333in"}[Queste sono alcune immagini prese
+![](./media/image4.png)[Queste sono alcune immagini prese
 dall'applicazione che sta funzionando sui nostri dispositivi]{.ul}
 
 **Strutture localizzate**
@@ -187,34 +184,28 @@ di esercizio commerciale.
 [Queste sono alcune immagini prese dall'applicazione che sta funzionando
 sui nostri dispositivi.]{.ul} ![Immagine che contiene mappa Descrizione
 generata
-automaticamente](./media/image5.png){width="3.031496062992126in"
-height="5.728346456692913in"}![Immagine che contiene mappa Descrizione
+automaticamente](./media/image5.png)![Immagine che contiene mappa Descrizione
 generata
-automaticamente](./media/image6.png){width="3.031496062992126in"
-height="5.729527559055118in"}
+automaticamente](./media/image6.png)
 
 La mappa implementa anche una barra di ricerca delle varie località così
 da rendere fruibile la sua navigazione e la visualizzazione di tutte le
 strutture offerte.
 
 Quando viene premuto il pulsante
-![](./media/image7.png){width="0.2193733595800525in"
-height="0.2536504811898513in"} la mappa sposterà automaticamente il suo
+![](./media/image7.png) la mappa sposterà automaticamente il suo
 punto focale rispetto la posizione geografica del dispositivo.
 
 I tasti di navigazione portano dalla pagina principale verso la mappa
 oppure verso una pagina che contiene informazioni descrittive.
 
 Scorrendo da sinistra verso destra oppure attraverso il pulsante
-![](./media/image8.png){width="0.2720188101487314in"
-height="0.2534722222222222in"} si può avere accesso alla barra laterale,
+![](./media/image8.png) si può avere accesso alla barra laterale,
 che contiene le sezioni di notizie.
 
 Le notizie vengono ottenute mediante web scraping su un sito web.
 
-![](./media/image9.jpg){width="2.6458333333333335in"
-height="5.0in"}![](./media/image10.jpg){width="2.6458333333333335in"
-height="5.0in"}
+![](./media/image9.jpg)![](./media/image10.jpg)
 
 E' possibile effettuare ricerche fra le varie notizie e cliccando sopra
 si vede il contenuto completo della news.
@@ -500,8 +491,7 @@ Modelli:
 +======================+===============+=================+============+
 +----------------------+---------------+-----------------+------------+
 
-![](./media/image11.png){width="7.892673884514435in"
-height="4.95744750656168in"}
+![](./media/image11.png)
 
 Come è possibile vedere nel nel class diagram notiamo che il modello
 della struttura è il modello più complicato dove abbiamo dei
@@ -527,9 +517,7 @@ chiamata backend.
 Introduciamo le varie schermate dell'applicazione e cosa un utente può
 fare e visualizzare in ognuna di esse.
 
-![](./media/image12.png){width="3.5430555555555556in"
-height="6.704166666666667in"}![](./media/image13.png){width="3.5430555555555556in"
-height="6.700694444444444in"}L'applicazione presenta come prima
+![](./media/image12.png)![](./media/image13.png)L'applicazione presenta come prima
 schermata quella di login, necessaria per potersi autenticare e accedere
 al servizio.
 
@@ -547,8 +535,7 @@ Questa pagina si suddivide in quattro parti fondamentali, l\'App Bar (la
 barra in alto) , il campo di ricerca, la lista delle categorie e la
 lista delle strutture suddivise per macro categorie.
 
-![](./media/image14.png){width="3.543307086614173in"
-height="6.68503937007874in"}
+![](./media/image14.png)
 
 Procediamo con l'analisi di ogni sua componentistica.
 
@@ -556,24 +543,20 @@ L**'App Bar** permette di selezionare una località diversa da quella
 attuale o scegliere di visualizzare le tutte le strutture selezionando
 l'opzione ovunque.
 
-![](./media/image15.png){width="3.031496062992126in"
-height="5.729527559055118in"}![Immagine che contiene testo, monitor
+![](./media/image15.png)![Immagine che contiene testo, monitor
 Descrizione generata
-automaticamente](./media/image16.png){width="3.031496062992126in"
-height="5.720866141732284in"}
+automaticamente](./media/image16.png)
 
 Il **campo di ricerca** permette di filtrare le strutture convenzionate
 in base al loro nome.
 
-![](./media/image17.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+![](./media/image17.png)
 
 La **lista delle categorie** permette di aprire una nuova pagina dove
 vengono visualizzate solo le strutture appartenenti a quella categoria.
 (Verrà affrontata in seguito questa pagina).
 
-![](./media/image18.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+![](./media/image18.png)
 
 La lista delle categorie è una lista con scorrimento orizzontale (che
 viene fornita dal backend) con tutte le categorie presenti nel servizio,
@@ -591,9 +574,7 @@ macro-categorie che si basano sullo stesso layout.
 La schermata è suddivisa in titolo, barra di ricerca e la lista
 effettiva per la visualizzazione.
 
-![](./media/image19.png){width="3.031496062992126in"
-height="5.739632545931759in"}![](./media/image20.png){width="3.031496062992126in"
-height="5.740410104986877in"}
+![](./media/image19.png)![](./media/image20.png)
 
 Non verranno approfonditi i componenti dato che sono simili tra le varie
 schermate.
@@ -602,19 +583,16 @@ Cliccando su una struttura (da qualsiasi parte dell'applicazione quindi
 da una card o da un marker) è possibile vedere tutte le informazioni di
 una determinata struttura, come è possibile vedere dalle foto.
 
-![](./media/image21.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+![](./media/image21.png)
 
 Per migliorare l'esperienza utente è stata introdotta una
 visualizzazione tramite mappa delle strutture, questa schermata è
 accessibile dalla barra di navigazione in basso.
 
 ![Immagine che contiene mappa Descrizione generata
-automaticamente](./media/image5.png){width="3.031496062992126in"
-height="5.728346456692913in"}![Immagine che contiene mappa Descrizione
+automaticamente](./media/image5.png)![Immagine che contiene mappa Descrizione
 generata
-automaticamente](./media/image6.png){width="3.031496062992126in"
-height="5.729527559055118in"}
+automaticamente](./media/image6.png)
 
 Come è possibile vedere questa schermata condivide con l\'home page ,
 l\'App Bar che permette di fare tutto ciò che era possibile fare prima.
@@ -629,14 +607,12 @@ schermata delle impostazioni, dove in questo caso è presente solo una
 breve descrizione dell'applicazione.
 
 ![Immagine che contiene testo Descrizione generata
-automaticamente](./media/image22.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+automaticamente](./media/image22.png)
 
 Un altro componente che non abbiamo trattato è il drawer dell'app che ci
 permette di accedere alle varie sezioni : news, eventi e comunicazioni.
 
-![](./media/image23.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+![](./media/image23.png)
 
 Il drawer mostra il nome dell'utente che è attualmente loggato, sotto di
 esso sono presenti le opzioni prima elencate.
@@ -645,9 +621,7 @@ Cliccando su una di queste opzioni ci troviamo in una pagina simile a
 quella per le categorie , in questo caso le "Card" per le notizie sono
 diverse e studiate appositamente per questo scopo.
 
-![](./media/image24.png){width="3.031496062992126in"
-height="5.729527559055118in"}![](./media/image25.png){width="3.031496062992126in"
-height="5.729527559055118in"}
+![](./media/image24.png)![](./media/image25.png)
 
 Come già visto in precedenza per la pagina delle categorie e macro
 categorie , questa sezione è molto simile vengono solo cambiate le
@@ -657,8 +631,7 @@ Cliccando su una notizia viene aperta la pagina di dettaglio per la
 visualizzazione della notizia.
 
 ![Immagine che contiene testo, monitor, screenshot Descrizione generata
-automaticamente](./media/image26.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+automaticamente](./media/image26.png)
 
 Come è possibile vedere questa pagina presenta tre componenti
 fondamentali, l'immagine della Notizia-Comunicazione-Evento, il titolo e
@@ -668,8 +641,7 @@ Dal drawer l'ultima azione possibile è il logout dell\'utente tramite
 l'apposito pulsante che chiede anche la conferma per approvare l'azione.
 
 ![Immagine che contiene testo Descrizione generata
-automaticamente](./media/image27.png){width="3.543307086614173in"
-height="6.697117235345582in"}
+automaticamente](./media/image27.png)
 
 Dopo aver eseguito il logout i dati dell'utente verranno cancellati
 dall'applicazione e verrà richiesto di effettuare nuovamente il login
@@ -751,8 +723,7 @@ strutture ecc. e della sezione new, eventi e comunicazioni.
 
 Quindi la nostra struttura avrà questo flusso:
 
-![](./media/image28.png){width="6.267716535433071in"
-height="1.6527777777777777in"}
+![](./media/image28.png)
 
 Ricordiamo che un widget o un block non effettuano direttamente nessuna
 chiamata al backend ma devono fare richiesta ad una repository.
@@ -1394,7 +1365,8 @@ Con questa logica sono stati analizzati tutti i casi critici
 dell'applicazione contenuti nel bloc che non affronteremo perché di
 facile interpretazione.
 
-**5** **PROGETTAZIONE BACK-END**
+
+##5 **PROGETTAZIONE BACK-END**
 
 Dal punto di vista back-end, si è scelto di utilizzare **Spring Boot**,
 un framework per lo sviluppo di applicazioni web basate su codice Java
@@ -1450,7 +1422,7 @@ relazionali (tramite **JPA**); **Hibernate** è ben noto per la sua
 eccellente stabilità e qualità, dimostrata dall\'accettazione e
 dall\'utilizzo da parte di decine di migliaia di sviluppatori Java.
 
-**5.1** **ACTIVITY DIAGRAM**
+##5.1 **ACTIVITY DIAGRAM**
 
 Gli Use Cases catturano il comportamento del sistema, illustrando quali
 sono i suoi requisiti funzionali.
@@ -1459,22 +1431,18 @@ Lo use case realizzato in figura permette di visualizzare tutte le
 funzionalità a cui può accedere l'utente scaricando l'applicazione
 mobile.
 
-![](./media/image29.png){width="6.135416666666667in"
-height="4.020833333333333in"}
+![](./media/image29.png)
 
 Come si può osservare, un cliente si autentica sul sistema, cioè
 effettua il login e dopo di che può eseguire una serie di funzionalità.
 
-![](./media/image30.png){width="8.523816710411198in"
-height="2.751968503937008in"}
-
+![](./media/image30.png)
 **5.2** **DEFINIZIONE DELLE ENTITÀ DI SISTEMA**
 
 Il Class Diagram mostra le classi che compongono il software e come esse
 si relazionano l'una con l'altra.
 
-![](./media/image31.png){width="3.930527121609799in"
-height="5.989374453193351in"}
+![](./media/image31.png)
 
 Il diagramma in figura mostra le classi che costituiscono i *"model"*
 del progetto. Per questioni di visibilità grafica non sono stati
@@ -1517,8 +1485,7 @@ il **GeoPoint .**
 All'interno del progetto possono essere individuati altri tre gruppi di
 entity:
 
-![](./media/image33.png){width="3.5349464129483814in"
-height="1.8263888888888888in"}
+![](./media/image33.png)
 
 Per effettuare un **Reverse geocoding** il più veloce ed efficiente
 possibile, è stato creato un albero binario, che effettua memorizzazione
@@ -1540,13 +1507,11 @@ Analizzando meglio le classi:
 Di seguito vengono riassunti i principali **DTO** utilizzati all'
 interno del progetto
 
-![](./media/image34.png){width="6.741979440069991in"
-height="3.1603029308836397in"}Le **exception** di ogni **Entity**
+![](./media/image34.png)Le **exception** di ogni **Entity**
 vengono gestite
-singolarmente:![](./media/image35.png){width="6.831500437445319in"
-height="4.454708005249344in"}
+singolarmente:![](./media/image35.png)
 
-**5.2.1** **DESIGN DELLA BASE DI DATI**
+##5.2.1 **DESIGN DELLA BASE DI DATI**
 
 Il Database, come spiegato in precedenza,è di tipo relazionale.
 
@@ -1555,19 +1520,17 @@ E' strutturato sulla base delle classi presenti all'interno del package
 
 Il diagramma Entità-Relazioni del Database è il seguente:
 
-![](./media/image36.png){width="6.270833333333333in"
-height="5.949574584426947in"}
+![](./media/image36.png)
 
 **Hibernate_sequence** e **user_seq** servono a memorizzare l'id
 utilizzato, utile per avere una successione esatta per la generazione
 degli ID.
 
-**5.3** **ANALISI SOFTWARE**
+##5.3 **ANALISI SOFTWARE**
 
 Il progetto è suddiviso in **32** package mostrati in figura
 
-![](./media/image37.png){width="6.463542213473316in"
-height="7.205651793525809in"}
+![](./media/image37.png)
 
 ##### 
 
@@ -1675,14 +1638,13 @@ tutte le strutture del DB sarebbe inefficiente e lento.
 E' stato quindi implementato una funzione che sfrutta l\'algoritmo di
 [Vincenty\'s geodesy]{.ul} per effettuare tale misurazione.
 
-**5.4** **ANALISI DELL'ALGORITMO DI RICERCA DELLE STRUTTURE**
+##5.4 **ANALISI DELL'ALGORITMO DI RICERCA DELLE STRUTTURE**
 
 Il blocco contenuto all\'interno del package "component" -\> "geoCode"
 principale è la componente che ci permette di identificare le strutture
 presenti in una determinata area geografica.
 
-![](./media/image38.png){width="3.4681780402449696in"
-height="3.6993897637795277in"}
+![](./media/image38.png)
 
 Per dare una breve descrizione delle classi sopra riportate :
 
@@ -1702,7 +1664,7 @@ Per dare una breve descrizione delle classi sopra riportate :
 -   La classe **GeoHashCircle** Incapsula l\'algoritmo di [Vincenty\'s
     geodesy.]{.ul}
 
-**5.4.1 APPROFONDIMENTO ALGORITMO DI VINCENTY GEODESY**
+##5.4.1 APPROFONDIMENTO ALGORITMO DI VINCENTY GEODESY**
 
 La formula di Vincenty è un metodo iterativo per calcolare la distanza
 tra due punti sulla superficie di uno sferoide, sviluppati da Thaddeus
@@ -1722,15 +1684,12 @@ una sequenza di equazioni in cui l\'output viene reinserito nella stessa
 sequenza di equazioni. L\'obiettivo è ridurre al minimo il valore di
 output dopo un determinato numero di iterazioni.
 
-![](./media/image39.png){width="6.276042213473316in"
-height="0.7506233595800524in"}![](./media/image40.png){width="3.0836767279090114in"
-height="1.5418383639545057in"}
+![](./media/image39.png)![](./media/image40.png)
 
 Dove d è la distanza tra due punti con longitudine e latitudine ( *λ, Φ*
 ) er è il raggio della terra.
 
-![](./media/image41.png){width="1.5052088801399826in"
-height="0.4499267279090114in"}
+![](./media/image41.png)
 
 Le formule di Vincenty sono indicate come accurate entro circa lo
 **0,3%**, il che è ottimo.
@@ -1744,8 +1703,7 @@ verso la piattaforma, con l'annotazione @**EnableWebSecurity**.
 Spring Security si trova sul classpath, **Spring Boot** protegge
 automaticamente tutti gli endpoint HTTP con l\'autenticazione \"di
 base\". Analizziamo il workflow del login
-:![](./media/image42.png){width="8.447871828521436in"
-height="4.515424321959755in"}
+:![](./media/image42.png)
 
 1)  La richiesta di login arriva a AuthenticationRestController con
     **/api/authenticate**.
@@ -1784,19 +1742,17 @@ Authentication-\> tokenProvider.getAuthentication(jwt);
 4)  Adesso è garantito l'accesso verso gli endPoint gestiti dai
     controller
 
-![](./media/image43.png){width="6.267716535433071in"
-height="3.9166666666666665in"}
+![](./media/image43.png)
 
-**5.5.1 CORS CONFIGURATION**
+##5.5.1 CORS CONFIGURATION**
 
 Il Cross-Origin Resource Sharing (CORS), un meccanismo che usa header
 HTTP addizionali per indicare che un dominio dispone
 dell\'autorizzazione per accedere alle risorse selezionate.
 
-![](./media/image44.png){width="6.267716535433071in"
-height="1.6666666666666667in"}
+![](./media/image44.png)
 
-**5.6 API**
+##5.6 API**
 
 La documentazione ha l\'obiettivo di mostrare le chiamate API di cui si
 compone l\'applicativo e le quattro classi Java annotate con
@@ -1810,1141 +1766,712 @@ L\' annotazione @**RestController** di Spring Boot è fondamentalmente
 una scorciatoia rapida che ci evita di dover sempre definire
 @**ResponseBody** .
 
-##### Login
+La documentazione ha l'obiettivo di mostrare le chiamate API di cui si compone l'applicativo
+e le quattro classi Java annotate con @Controller.
+Questo applicativo RESTful è progettato per restituire dati (JSON) che verranno inviati dai
+controller direttamente tramite la risposta HTTP.
+L' annotazione @RestController di Spring Boot è fondamentalmente una scorciatoia rapida
+che ci evita di dover sempre definire @ResponseBody.
 
-Per effettuare il login bisogna fare una richiesta di tipo POST, con i
-seguenti header json:
+**Login**
 
-  -----------------------------------------------------------------------
+Per effettuare il login bisogna fare una richiesta di tipo POST, con i seguenti header json:
+
+```
 POST https://geopic.flaminiovilla.it/api/authenticate
+```
+```
+@CrossOrigin(origins = "*")
+@PostMapping("/authenticate")
+public ResponseEntity<UserHelper.JWTToken> authorize(@Valid @RequestBody
+LoginDTO loginDto)
+)
+```
+```
+Request Response
+{
+"email" : "viflaadmin@gmail.com",
+"password" : "flaminio"
+}
+```
+```
+{
+"id_token": “nygsvsgsodjpa64s...",
+"user": {
+"email": "viflaadmin@gmail.com",
+"password": null,
+"role": ADMIN,
+"firstName": "flaminio",
+"lastName": "villa",
+"regionId": 99
+}
+}
+```
+Chiaramente la password dell’utente non viene inserita all’interno della risposta, ma verrà sostituita
+con il valore null.
 
-  -----------------------------------------------------------------------
+Ad ogni mail sono associati ruoli particolari , quindi in base al tipo di utente che andrà ad
+effettuare il login , sono previsti diversi tipi di profili, con autorizzazioni differenti.Questa
+parte non viene gestita, ma verranno utilizzati principalmente i profili di tipo ADMIN e
+USER.
 
-+-----------------------------------------------------------------------+
-| \@CrossOrigin(origins = \"\*\")                                       |
-|                                                                       |
-| \@PostMapping(\"/authenticate\")                                      |
-|                                                                       |
-| public ResponseEntity\<UserHelper.JWTToken> authorize(\@Valid         |
-| \@RequestBody LoginDTO loginDto)                                      |
-|                                                                       |
-| )                                                                     |
-+-----------------------------------------------------------------------+
 
-+-----------------------------------+-----------------------------------+
-| **Request**                       | **Response**                      |
-+-----------------------------------+-----------------------------------+
-| **{**                             | **{**                             |
-|                                   |                                   |
-| **\"email\" :                     | **\"id_token\":                   |
-| \"viflaadmin\@gmail.com\",**      | "nygsvsgsodjpa64s\...\",**        |
-|                                   |                                   |
-| **\"password\" : \"flaminio\"**   | **\"user\": {**                   |
-|                                   |                                   |
-| **}**                             | **\"email\":                      |
-|                                   | \"viflaadmin\@gmail.com\",**      |
-|                                   |                                   |
-|                                   | **\"password\": null,**           |
-|                                   |                                   |
-|                                   | **\"role\": ADMIN,**              |
-|                                   |                                   |
-|                                   | **\"firstName\": \"flaminio\",**  |
-|                                   |                                   |
-|                                   | **\"lastName\": \"villa\",**      |
-|                                   |                                   |
-|                                   | **\"regionId\": 99**              |
-|                                   |                                   |
-|                                   | **}**                             |
-|                                   |                                   |
-|                                   | **}**                             |
-+-----------------------------------+-----------------------------------+
+**Registrazione**
 
-##### Chiaramente la password dell'utente non viene inserita all'interno della risposta, ma verrà sostituita con il valore null.
-
-Ad ogni mail sono associati ruoli particolari , quindi in base al tipo
-di utente che andrà ad effettuare il login , sono previsti diversi tipi
-di profili, con autorizzazioni differenti.Questa parte non viene
-gestita, ma verranno utilizzati principalmente i profili di tipo
-**ADMIN** e **USER.**
-
-##### Registrazione
-
-Per effettuare la registrazione bisogna fare una richiesta di tipo POST,
-i ruoli seguono la seguente gerarchia, è necessario inserire il proprio
-token durante le richieste:
-
--   Un **admin** può creare un altro **admin**
-
-  -----------------------------------------------------------------------
+Per effettuare la registrazione bisogna fare una richiesta di tipo POST, i ruoli seguono la
+seguente gerarchia, è necessario inserire il proprio token durante le richieste:
+● Un admin può creare un altro admin
 POST https://geopic.flaminiovilla.it/api/register/admin
 
-  -----------------------------------------------------------------------
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/register/admin\")                                    |
-|                                                                       |
-| public User registerAdmin(\@Valid \@RequestBody UserDTO userDTO)      |
-+-----------------------------------------------------------------------+
-
--   Un **admin** può creare un profilo di tipo **secretary**
-
-  -----------------------------------------------------------------------
+```
+@PostMapping("/register/admin")
+public User registerAdmin(@Valid @RequestBody UserDTO userDTO)
+```
+```
+● Un admin può creare un profilo di tipo secretary
 POST https://geopic.flaminiovilla.it/api/register/adminSecretary
-
-  -----------------------------------------------------------------------
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/register/adminSecretary\")                           |
-|                                                                       |
-| public User registerAdminSecretary(\@Valid \@RequestBody UserDTO      |
-| userDTO)                                                              |
-+-----------------------------------------------------------------------+
-
--   Una **secretary** può generare i profili **adminSecretary**
-
-  -----------------------------------------------------------------------
+```
+```
+@PostMapping("/register/adminSecretary")
+public User registerAdminSecretary(@Valid @RequestBody UserDTO userDTO)
+```
+```
+● Una secretary può generare i profili adminSecretary
 POST https://geopic.flaminiovilla.it/api/register/secretary
-
-  -----------------------------------------------------------------------
-
-+-----------------------------------------------------------------------+
-| PostMapping(\"/register/secretary\")                                  |
-|                                                                       |
-| public User registerSecretary(\@Valid \@RequestBody UserDTO userDTO)  |
-+-----------------------------------------------------------------------+
-
--   Chiunque può registrarsi come **user**
-
-  -----------------------------------------------------------------------
+```
+```
+PostMapping("/register/secretary")
+public User registerSecretary(@Valid @RequestBody UserDTO userDTO)
+```
+```
+● Chiunque può registrarsi come user
 POST https://geopic.flaminiovilla.it/api/register/user
+```
+```
+@PostMapping("/register/user")
+public User registerUser(@Valid @RequestBody UserDTO userDTO)
+```
+Per testare che l’utente creato ha i permessi necessari sono stati creati specifici endpoint di
+test, che date le credenziali di login, restituiscono i ruoli posseduti.
 
-  -----------------------------------------------------------------------
+```
+POST https://geopic.flaminiovilla.it/api/testAdmin
+POST https://geopic.flaminiovilla.it/api/testAdminSecretary
+POST https://geopic.flaminiovilla.it/api/testSecretary
+POST https://geopic.flaminiovilla.it/api/testUser
+```
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/register/user\")                                     |
-|                                                                       |
-| public User registerUser(\@Valid \@RequestBody UserDTO userDTO)       |
-+-----------------------------------------------------------------------+
+**Category**
 
-Per testare che l'utente creato ha i permessi necessari sono stati
-creati specifici endpoint di test, che date le credenziali di login,
-restituiscono i ruoli posseduti.
+Le API della sezione Category sono gestite da due diversi @RestController :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [[https://geopic.]{.ul}](ht                                           |
-| tps://geopic.flaminiovilla.it/api/testSecretary)flaminiovilla[[.it/ap |
-| i]{.ul}](https://geopic.flaminiovilla.it/api/testSecretary)/testAdmin |
-|                                                                       |
-| POST                                                                  |
-| [[https://geopic.flaminiovilla.it/api/testAdm                         |
-| inSecretary]{.ul}](https://geopic.flaminiovilla.it/api/testSecretary) |
-|                                                                       |
-| POST                                                                  |
-| [[https://geopic.flaminiovilla.it/api/te                              |
-| stSecretary]{.ul}](https://geopic.flaminiovilla.it/api/testSecretary) |
-|                                                                       |
-| POST                                                                  |
-| [[https://geopic.flaminiovilla.it/a                                   |
-| pi/test]{.ul}](https://geopic.flaminiovilla.it/api/testSecretary)User |
-+-----------------------------------------------------------------------+
+CategoryController :
+Restituisce un json contenente tutte le category presenti :
 
-##### 
+```
+POST https://geopic.flaminiovilla.it/category/findAll
+RESPONSE[ { "id": 1 ,"name": "GEOPIC", "color": "#ffff00"},...]
+```
+```
+@GetMapping("/findAll")
+List<Category> findAll()
+```
+CategoryCRUDController :
+Restituisce un json contenente tutte le category presenti ma in forma ridotta, mostrando solo
+id e nome :
 
-##### Category
+```
+POST https://geopic.flaminiovilla.it/api/category/findAllShort
+RESPONSE { "id": 1 ,"name": "GEOPIC"}
+```
+```
+@GetMapping("/findAllShort")
+String findAllShort()
+```
+Dati nome e colore creo un nuovo obj di tipo category, se l'inserimento riesce lo restituisco
+in formato json con l’ id (che viene generato automaticamente) :
 
-Le **API** della sezione Category sono gestite da due diversi
-@**RestController** :
+```
+POST https://geopic.flaminiovilla.it/api/category/create
+INPUT {"name": "GEOPIC", "color": "#ffff00"}
+RESPONSE { "id": 1 ,"name": "GEOPIC", "color": "#ffff00"}
+```
+```
+@PostMapping("/create")
+@ResponseBody
+public Category create(@RequestBody CategoryDTO categoryDTO)
+```
+Specificando id , name e color sovrascrive la category con lo stesso id :
 
-[CategoryController]{.ul} :
+```
+POST https://geopic.flaminiovilla.it/api/category/update
+INPUT { "id": 1 ,"name": "GEOPIC", "color": "#aaaa11"}
+RESPONSE come INPUT
+```
 
-Restituisce un json contenente tutte le
-[category](https://geopic.flaminiovilla.it/api/category) presenti :
+```
+@PutMapping("/update")
+@ResponseBody
+public Category update(@RequestBody CategoryDTO categoryDTO)
+```
+Ricerca dato un id e restituisce la category corrispondente in formato json.
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovil                                           |
-| la.it/category](https://geopic.flaminiovilla.it/api/category)/findAll |
-|                                                                       |
-| RESPONSE\[ { \"id\": 1,\"name\": \"GEOPIC\", \"color\":               |
-| \"#ffff00\"},\...\]                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAll\")                                            |
-|                                                                       |
-| List\<Category> findAll()                                             |
-+-----------------------------------------------------------------------+
-
-[CategoryCRUDController :]{.ul}
-
-Restituisce un json contenente tutte le
-[category](https://geopic.flaminiovilla.it/api/category) presenti ma in
-forma ridotta, mostrando solo id e nome :
-
-+-----------------------------------------------------------------------+
-| POST <https://geopic.flaminiovilla.it/api/category>/findAllShort      |
-|                                                                       |
-| RESPONSE { \"id\": 1,\"name\": \"GEOPIC\"}                            |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAllShort\")                                       |
-|                                                                       |
-| String findAllShort()                                                 |
-+-----------------------------------------------------------------------+
-
-Dati nome e colore creo un nuovo obj di tipo
-[category](https://geopic.flaminiovilla.it/api/category), se
-l\'inserimento riesce lo restituisco in formato json con l' id (che
-viene generato automaticamente) :
-
-+-----------------------------------------------------------------------+
-| POST <https://geopic.flaminiovilla.it/api/category>/create            |
-|                                                                       |
-| INPUT {\"name\": \"GEOPIC\", \"color\": \"#ffff00\"}                  |
-|                                                                       |
-| RESPONSE { \"id\": 1,\"name\": \"GEOPIC\", \"color\": \"#ffff00\"}    |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/create\")                                            |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public Category create(\@RequestBody CategoryDTO categoryDTO)         |
-+-----------------------------------------------------------------------+
-
-Specificando id , name e color sovrascrive la
-[category](https://geopic.flaminiovilla.it/api/category) con lo stesso
-id :
-
-+-----------------------------------------------------------------------+
-| POST <https://geopic.flaminiovilla.it/api/category>/update            |
-|                                                                       |
-| INPUT { \"id\": 1,\"name\": \"GEOPIC\", \"color\": \"#aaaa11\"}       |
-|                                                                       |
-| RESPONSE come INPUT                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PutMapping(\"/update\")                                             |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public Category update(\@RequestBody CategoryDTO categoryDTO)         |
-+-----------------------------------------------------------------------+
-
-Ricerca dato un id e restituisce la
-[category](https://geopic.flaminiovilla.it/api/category) corrispondente
-in formato json.
-
-+-----------------------------------------------------------------------+
-| POST <https://geopic.flaminiovilla.it/api/category>/findById          |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE { \"id\": 1,\"name\": \"GEOPIC\", \"color\": \"#ffff00\"}    |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findById\")                                          |
-|                                                                       |
-| Optional\<Category> findById(\@RequestBody CategoryDTO categoryDTO)   |
-+-----------------------------------------------------------------------+
-
+```
+POST https://geopic.flaminiovilla.it/api/category/findById
+INPUT {"id": 1 }
+RESPONSE { "id": 1 ,"name": "GEOPIC", "color": "#ffff00"}
+```
+```
+@PostMapping("/findById")
+Optional<Category> findById(@RequestBody CategoryDTO categoryDTO)
+```
 Elimina dato un id :
 
-+-----------------------------------------------------------------------+
-| POST <https://geopic.flaminiovilla.it/api/category>/delete            |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE 200                                                          |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/category/delete
+INPUT {"id": 1 }
+RESPONSE 200
+```
+```
+@DeleteMapping("/delete")
+public Boolean delete(@RequestBody CategoryDTO categoryDTO)
+```
+**News**
 
-+-----------------------------------------------------------------------+
-| \@DeleteMapping(\"/delete\")                                          |
-|                                                                       |
-| public Boolean delete(\@RequestBody CategoryDTO categoryDTO)          |
-+-----------------------------------------------------------------------+
+Le API della sezione News sono gestite da due diversi @RestController :
 
-##### News
+NewsController :
+Restituisce tutte le news che contengono la stringa di ricerca nel titolo, se non trovo niente
+cerco {search} all'interno della description.
 
-Le **API** della sezione **News** sono gestite da due diversi
-@**RestController** :
-
-[NewsController]{.ul} :
-
-Restituisce tutte le news che contengono la stringa di ricerca nel
-titolo, se non trovo niente cerco {search} all\'interno della
-description.
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/](https://geopic.flaminiovilla.it/api/category)news/search/{search} |
-|                                                                       |
-| RESPONSE *\[{*                                                        |
-|                                                                       |
-| *\"id\": 16,*                                                         |
-|                                                                       |
-| *\"description\": \"Lorem ipsum\",*                                   |
-|                                                                       |
-| *\"title\": \"10 Ways To Immediately Start Selling POSIZIONE\",*      |
-|                                                                       |
-| *\"image\": \"https://picsum.photos/200/300?random=7\",*              |
-|                                                                       |
-| *\"date\": \"2021-03-02 00:00:00\",*                                  |
-|                                                                       |
-| *\"section\": \"News\"} ,\...\]*                                      |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/search/{search}\")                                   |
-|                                                                       |
-| List\<NewsDTO> search(\@PathVariable(\"search\") String search,       |
-| \@RequestBody StructureDTO structureDTO)                              |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/news/search/{search}
+RESPONSE [{
+"id": 16 ,
+"description": "Lorem ipsum",
+"title": "10 Ways To Immediately Start Selling POSIZIONE",
+"image": "https://picsum.photos/200/300?random=7",
+"date": "2021- 03 - 02 00:00:00",
+"section": "News"} ,...]
+```
+```
+@PostMapping("/search/{search}")
+List<NewsDTO> search(@PathVariable("search") String search, @RequestBody
+StructureDTO structureDTO)
+```
 
 Restituisce tutte le news di una section:
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flamini                                               |
-| ovilla.it/](https://geopic.flaminiovilla.it/api/category)news/section |
-|                                                                       |
-| INPUT *{ \"section\":\"News\"}*                                       |
-|                                                                       |
-| RESPONSE *\[\"id\": 1,\"description\": \"\...\",\"title\":            |
-| "\...\",\"image\":\"\...\",*                                          |
-|                                                                       |
-| *\"date\":\"2021-03-02\",\"section\": \"News\"} , ...\]*              |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/news/section
+INPUT { "section":"News"}
+RESPONSE ["id": 1 ,"description": "...","title": “...","image":"...",
+"date":"2021- 03 - 02","section": "News"} , ...]
+```
+```
+@PostMapping("/section")
+List<NewsDTO> section(@RequestBody StructureDTO structureDTO)
+```
+Ricerca dato un id e restituisce la news corrispondente in formato json.:
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/section\")                                           |
-|                                                                       |
-| List\<NewsDTO> section(\@RequestBody StructureDTO structureDTO)       |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/news/findById
+INPUT { "section":"News"}
+RESPONSE ["id": 1 ,"description": "...","title": “...","image":"...",
+"date":"2021- 03 - 02","section": "News"} , ...]
+```
+```
+@PostMapping("/findById")
+Optional<News> findById(@RequestBody NewsDTO newsDTO)
+```
+NewsCRUDController :
+Crea una nuova news ,Date e' in formato stringa e verrà convertiro in in Sql.Date ,section puo'
+essere: ["News","Comunicazioni","Eventi"], se l'inserimento riesce lo restituisco in formato
+json con l’ id (che viene generato automaticamente).
 
-Ricerca dato un id e restituisce la news corrispondente in formato
-json.:
+```
+POST https://geopic.flaminiovilla.it/api/news/create
+INPUT {"id": 1 ,"description": "...","title": “...","image":"...",
+"date":"2021- 03 - 02","section": "News"}
+```
+```
+@PostMapping("/create")
+@ResponseBody
+public News create(@RequestBody NewsDTO newsDTO)0
+```
+Specificando l'id , e modificando eventuali campi vado a sovrascrivere la news :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminio                                              |
-| villa.it/](https://geopic.flaminiovilla.it/api/category)news/findById |
-|                                                                       |
-| INPUT *{ \"section\":\"News\"}*                                       |
-|                                                                       |
-| RESPONSE *\[\"id\": 1,\"description\": \"\...\",\"title\":            |
-| "\...\",\"image\":\"\...\",*                                          |
-|                                                                       |
-| *\"date\":\"2021-03-02\",\"section\": \"News\"} , ...\]*              |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findById\")                                          |
-|                                                                       |
-| Optional\<News> findById(\@RequestBody NewsDTO newsDTO)               |
-+-----------------------------------------------------------------------+
-
-[NewsCRUDController :]{.ul}
-
-Crea una nuova news ,Date e\' in formato stringa e verrà convertiro in
-in Sql.Date ,section puo\' essere:
-\[\"News\",\"Comunicazioni\",\"Eventi\"\], se l\'inserimento riesce lo
-restituisco in formato json con l' id (che viene generato
-automaticamente).
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovi                                            |
-| lla.it/api/](https://geopic.flaminiovilla.it/api/category)news/create |
-|                                                                       |
-| INPUT *{\"id\": 1,\"description\": \"\...\",\"title\":                |
-| "\...\",\"image\":\"\...\",*                                          |
-|                                                                       |
-| *\"date\":\"2021-03-02\",\"section\": \"News\"}*                      |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/create\")                                            |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public News create(\@RequestBody NewsDTO newsDTO)0                    |
-+-----------------------------------------------------------------------+
-
-Specificando l\'id , e modificando eventuali campi vado a sovrascrivere
-la news :
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovi                                            |
-| lla.it/api/](https://geopic.flaminiovilla.it/api/category)news/update |
-|                                                                       |
-| INPUT *{\"id\": 1,\"description\": \"\...\",\"title\":                |
-| "\...\",\"image\":\"\...\",*                                          |
-|                                                                       |
-| *\"date\":\"2021-03-02\",\"section\": \"News\"}*                      |
-|                                                                       |
-| RESPONSE come INPUT                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PutMapping(\"/update\")                                             |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public News update(\@RequestBody NewsDTO newsDTO)                     |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/news/update
+INPUT {"id": 1 ,"description": "...","title": “...","image":"...",
+"date":"2021- 03 - 02","section": "News"}
+RESPONSE come INPUT
+```
+```
+@PutMapping("/update")
+@ResponseBody
+public News update(@RequestBody NewsDTO newsDTO)
+```
 
 Elimina dato un id :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovi                                            |
-| lla.it/api/](https://geopic.flaminiovilla.it/api/category)news/delete |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE 200                                                          |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/news/delete
+INPUT {"id": 1 }
+RESPONSE 200
+```
+```
+@DeleteMapping("/delete")
+public Boolean delete(@RequestBody NewsDTO newsDTO)
+```
+**Place**
 
-+-----------------------------------------------------------------------+
-| \@DeleteMapping(\"/delete\")                                          |
-|                                                                       |
-| public Boolean delete(\@RequestBody NewsDTO newsDTO)                  |
-+-----------------------------------------------------------------------+
+Questo gruppo di api si occupa della ricerca delle strutture in una determinata località :
 
-##### Place
+Aiuto al completamento del nome della località , mostra solo i primi 10 record
+esempio : ...api/place/rom
 
-Questo gruppo di api si occupa della ricerca delle strutture in una
-determinata località :
-
-Aiuto al completamento del nome della località , mostra solo i primi 10
-record
-
-esempio :
-\...[api/](https://geopic.flaminiovilla.it/api/category)place/rom
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovi                                            |
-| lla.it/](https://geopic.flaminiovilla.it/api/category)place/{initStr} |
-|                                                                       |
-| RESPONSE \[{                                                          |
-|                                                                       |
-| \"id\": 4792,                                                         |
-|                                                                       |
-| \"istat\": \"58091\",                                                 |
-|                                                                       |
-| \"comune\": \"Roma\",                                                 |
-|                                                                       |
-| \"latitude\": 41.89277044,                                            |
-|                                                                       |
-| \"longitude\": 12.48366723                                            |
-|                                                                       |
-| }, \...\]                                                             |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/{initStr}\")                                          |
-|                                                                       |
-| List\<Place> findPlaceByNameBeginning(\@PathVariable(\"initStr\")     |
-| String initialString)                                                 |
-+-----------------------------------------------------------------------+
-
+```
+POST https://geopic.flaminiovilla.it/place/{initStr}
+RESPONSE [{
+"id": 4792 ,
+"istat": "58091",
+"comune": "Roma",
+"latitude": 41.89277044,
+"longitude": 12.48366723
+}, ...]
+```
+```
+@GetMapping("/{initStr}")
+List<Place> findPlaceByNameBeginning(@PathVariable("initStr") String
+initialString)
+```
 Data latitudine e longitudine restituisce il nome del comune più vicino.
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiov                                             |
-| illa.it/](https://geopic.flaminiovilla.it/api/category)place/cityname |
-|                                                                       |
-| INPUT { \"latitude\": 41.89277044,\"longitude\": 12.48366723 }        |
-|                                                                       |
-| RESPONSE { \"comune\": \"Roma\" }                                     |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/place/cityname
+INPUT { "latitude": 41.89277044,"longitude": 12.48366723 }
+RESPONSE { "comune": "Roma" }
+```
+```
+@PostMapping("/cityname")
+public String cityname(@RequestBody StructureDTO structureDTO)
+```
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/cityname\")                                          |
-|                                                                       |
-| public String cityname(\@RequestBody StructureDTO structureDTO)       |
-+-----------------------------------------------------------------------+
 
-##### 
+**Referral Person**
 
-##### Referral Person
+ReferralPerson definisce le generalità del personale gestore delle convenzioni e sono gestite
+da due diversi @RestController :
 
-**ReferralPerson** definisce le generalità del personale gestore delle
-convenzioni e sono gestite da due diversi @**RestController** :
+ReferralPersonController :
 
-[ReferralPersonController :]{.ul}
+Specificando l'id , e modificando eventuali campi vado a sovrascrivere la referralPerson :
 
-Specificando l\'id , e modificando eventuali campi vado a sovrascrivere
-la referralPerson :
+```
+POST https://geopic.flaminiovilla.it/referralPerson/findAll
+RESPONSE{
+"id": 1 ,
+"email": "vifla01@gmail.com",
+"name": "Flaminio",
+"surname": "Villa",
+"phone": "3775093443",
+"secretary": {
+"id": 1 ,
+"name": "geopic",
+"address": "via sandro sandri 81",
+"email": "geopic@flaminiovilla.it",
+"phone": "3775093443E9",
+"region": {
+"id": 3 ,
+"name": "Calabria"
+}
+},
+"region": {
+"id": 3 ,
+"name": "Calabria"
+}
+}, ...]
+```
+```
+},
+```
+```
+@GetMapping("/findAll")
+List<ReferralPerson> findAll()
+```
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/                                     |
-| ](https://geopic.flaminiovilla.it/api/category)referralPerson/findAll |
-|                                                                       |
-| RESPONSE{                                                             |
-|                                                                       |
-| \"id\": 1,                                                            |
-|                                                                       |
-| \"email\": \"vifla01\@gmail.com\",                                    |
-|                                                                       |
-| \"name\": \"Flaminio\",                                               |
-|                                                                       |
-| \"surname\": \"Villa\",                                               |
-|                                                                       |
-| \"phone\": \"3775093443\",                                            |
-|                                                                       |
-| \"secretary\": {                                                      |
-|                                                                       |
-| \"id\": 1,                                                            |
-|                                                                       |
-| \"name\": \"geopic\",                                                 |
-|                                                                       |
-| \"address\": \"via sandro sandri 81\",                                |
-|                                                                       |
-| \"email\": \"geopic\@flaminiovilla.it\",                              |
-|                                                                       |
-| \"phone\": \"3775093443E9\",                                          |
-|                                                                       |
-| \"region\": {                                                         |
-|                                                                       |
-| \"id\": 3,                                                            |
-|                                                                       |
-| \"name\": \"Calabria\"                                                |
-|                                                                       |
-| }                                                                     |
-|                                                                       |
-| },                                                                    |
-|                                                                       |
-| \"region\": {                                                         |
-|                                                                       |
-| \"id\": 3,                                                            |
-|                                                                       |
-| \"name\": \"Calabria\"                                                |
-|                                                                       |
-| }                                                                     |
-|                                                                       |
-| }, ...\]                                                              |
-|                                                                       |
-| },                                                                    |
-+-----------------------------------------------------------------------+
+ReferralPersonCRUDController :
+Restituisce un json contenente tutte le referralPerson presenti ma in forma ridotta,
+mostrando solo id e nome :
 
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAll\")                                            |
-|                                                                       |
-| List\<ReferralPerson> findAll()                                       |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/referralPerson/findAllShort
+RESPONSE { "id": 1 ,"name": "Andrei"}
+```
+```
+@GetMapping("/findAllShort")
+String findAllShort()
+```
+Ricerca dato un id e restituisce la referralPerson corrispondente in formato json.
 
-[ReferralPersonCRUDController :]{.ul}
+```
+POST https://geopic.flaminiovilla.it/api/referralPerson/findById
+INPUT {"id": 1 }
+RESPONSE {"id": 1,"email": "","name": "","phone": "","address": "","regionId": }
+```
+```
+@PostMapping("/findById")
+Optional<ReferralPerson> findById(@RequestBody ReferralPersonDTO
+referralPersonDTO)
+```
+Crea una nuova referralPerson e se l’inserimento va a buon fine la restituisce in formato
+json
 
-Restituisce un json contenente tutte le referralPerson presenti ma in
-forma ridotta, mostrando solo id e nome :
+```
+POST https://geopic.flaminiovilla.it/api/referralPerson/create
+INPUT{ "email": "","name": "","phone": "","address": "","regionId": 1 }
+RESPONSE come INPUT + ID
+```
+```
+@PostMapping("/create")
+@ResponseBody
+public ReferralPerson create(@RequestBody ReferralPersonDTO
+referralPersonDTO)
+```
+Specificando l'id , e modificando eventuali campi vado a sovrascrivere la referralPerson :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/api/](htt                            |
-| ps://geopic.flaminiovilla.it/api/category)referralPerson/findAllShort |
-|                                                                       |
-| RESPONSE { \"id\": 1,\"name\": \"Andrei\"}                            |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAllShort\")                                       |
-|                                                                       |
-| String findAllShort()                                                 |
-+-----------------------------------------------------------------------+
-
-Ricerca dato un id e restituisce la referralPerson corrispondente in
-formato json.
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/api/]                                |
-| (https://geopic.flaminiovilla.it/api/category)referralPerson/findById |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE {\"id\": 1,\"email\": \"\",\"name\": \"\",\"phone\":         |
-| \"\",\"address\": \"\",\"regionId\": }                                |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findById\")                                          |
-|                                                                       |
-| Optional\<ReferralPerson> findById(\@RequestBody ReferralPersonDTO    |
-| referralPersonDTO)                                                    |
-+-----------------------------------------------------------------------+
-
-Crea una nuova referralPerson e se l'inserimento va a buon fine la
-restituisce in formato json
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/api                                  |
-| /](https://geopic.flaminiovilla.it/api/category)referralPerson/create |
-|                                                                       |
-| INPUT{ \"email\": \"\",\"name\": \"\",\"phone\": \"\",\"address\":    |
-| \"\",\"regionId\": 1 }                                                |
-|                                                                       |
-| RESPONSE come INPUT + ID                                              |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/create\")                                            |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public ReferralPerson create(\@RequestBody ReferralPersonDTO          |
-| referralPersonDTO)                                                    |
-+-----------------------------------------------------------------------+
-
-Specificando l\'id , e modificando eventuali campi vado a sovrascrivere
-la referralPerson :
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/api                                  |
-| /](https://geopic.flaminiovilla.it/api/category)referralPerson/update |
-|                                                                       |
-| INPUT Come nel caso dell'inserimento ma specificando l'id             |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PutMapping(\"/update\")                                             |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public ReferralPerson update(\@RequestBody ReferralPersonDTO          |
-| referralPersonDTO)                                                    |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/referralPerson/update
+INPUT Come nel caso dell’inserimento ma specificando l’id
+```
+```
+@PutMapping("/update")
+@ResponseBody
+public ReferralPerson update(@RequestBody ReferralPersonDTO
+referralPersonDTO)
+```
 
 Elimina dato un id (Se presente) :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/api                                  |
-| /](https://geopic.flaminiovilla.it/api/category)referralPerson/delete |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE 200                                                          |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/referralPerson/delete
+INPUT {"id": 1 }
+RESPONSE 200
+```
+```
+@DeleteMapping("/delete")
+public Boolean delete(@RequestBody SecretaryDTO secretaryDTO)
+```
+**Secretary**
 
-+-----------------------------------------------------------------------+
-| \@DeleteMapping(\"/delete\")                                          |
-|                                                                       |
-| public Boolean delete(\@RequestBody SecretaryDTO secretaryDTO)        |
-+-----------------------------------------------------------------------+
-
-##### Secretary
-
-La classe **Secretary** contiene le informazioni delle sedi di controllo
-in cui lavorano le **ReferralPerson** sono gestite da due diversi
-@**RestController** :
-
-[SecretaryController :]{.ul}
-
+La classe Secretary contiene le informazioni delle sedi di controllo in cui lavorano le
+ReferralPerson sono gestite da due diversi @RestController :
+SecretaryController :
 Restituisce un json contenente tutte le secretary presenti :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovill                                          |
-| a.it/](https://geopic.flaminiovilla.it/api/category)secretary/findAll |
-|                                                                       |
-| RESPONSE \[{                                                          |
-|                                                                       |
-| \"id\": 1,                                                            |
-|                                                                       |
-| \"name\": \"geopic\",                                                 |
-|                                                                       |
-| \"address\": \"via sandro sandri 81\",                                |
-|                                                                       |
-| \"email\": \"geopic\@flaminiovilla.it\",                              |
-|                                                                       |
-| \"phone\": \"3775093443E9\",                                          |
-|                                                                       |
-| \"region\": {                                                         |
-|                                                                       |
-| \"id\": 3,                                                            |
-|                                                                       |
-| \"name\": \"Calabria\"                                                |
-|                                                                       |
-| }                                                                     |
-|                                                                       |
-| }, ... \]                                                             |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/secretary/findAll
+RESPONSE [{
+"id": 1 ,
+"name": "geopic",
+"address": "via sandro sandri 81",
+"email": "geopic@flaminiovilla.it",
+"phone": "3775093443E9",
+"region": {
+"id": 3 ,
+"name": "Calabria"
+}
+}, ... ]
+```
+```
+@GetMapping("/findAll")
+List<Secretary> findAll()
+```
+SecretaryCRUDController :
 
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAll\")                                            |
-|                                                                       |
-| List\<Secretary> findAll()                                            |
-+-----------------------------------------------------------------------+
+Ricerca dato un id e restituisce la secretary corrispondente in formato json.
 
-[SecretaryCRUDController :]{.ul}
+```
+POST https://geopic.flaminiovilla.it/api/secretary/findById
+INPUT {"id": 1 }
+RESPONSE {"id": 1,"email": "","name": "","phone": "","address": "","regionId": }
+```
 
-Ricerca dato un id e restituisce la secretary corrispondente in formato
-json.
+```
+@PostMapping("/findById")
+Optional<Secretary> findById(@RequestBody SecretaryDTO secretaryDTO)
+```
+Restituisce un json contenente tutte le secretary presenti ma in forma ridotta, mostrando
+solo id e nome :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/                                     |
-| api/](https://geopic.flaminiovilla.it/api/category)secretary/findById |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE {\"id\": 1,\"email\": \"\",\"name\": \"\",\"phone\":         |
-| \"\",\"address\": \"\",\"regionId\": }                                |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/secretary/findAllShort
+RESPONSE [{ "id": 1 ,"name": "" , ... ]}
+```
+```
+@GetMapping("/findAllShort")
+String findAllShort()
+```
+Crea una nuova secretary e se l’inserimento va a buon fine la restituisce in formato json
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findById\")                                          |
-|                                                                       |
-| Optional\<Secretary> findById(\@RequestBody SecretaryDTO              |
-| secretaryDTO)                                                         |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/secretary/create
+INPUT{ "email": "","name": "","phone": "","address": "","regionId": 1 }
+RESPONSE come INPUT + ID
+```
+```
+@PostMapping("/create")
+@ResponseBody
+public Secretary create(@RequestBody SecretaryDTO secretaryDTO)
+```
+Specificando l'id , e modificando eventuali campi vado a sovrascrivere la secretary :
 
-Restituisce un json contenente tutte le secretary presenti ma in forma
-ridotta, mostrando solo id e nome :
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/api/                                 |
-| ](https://geopic.flaminiovilla.it/api/category)secretary/findAllShort |
-|                                                                       |
-| RESPONSE \[{ \"id\": 1,\"name\": \"\" , ... \]}                       |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAllShort\")                                       |
-|                                                                       |
-| String findAllShort()                                                 |
-+-----------------------------------------------------------------------+
-
-Crea una nuova secretary e se l'inserimento va a buon fine la
-restituisce in formato json
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/api/](https://geopic.flaminiovilla.it/api/category)secretary/create |
-|                                                                       |
-| INPUT{ \"email\": \"\",\"name\": \"\",\"phone\": \"\",\"address\":    |
-| \"\",\"regionId\": 1 }                                                |
-|                                                                       |
-| RESPONSE come INPUT + ID                                              |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/create\")                                            |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public Secretary create(\@RequestBody SecretaryDTO secretaryDTO)      |
-+-----------------------------------------------------------------------+
-
-Specificando l\'id , e modificando eventuali campi vado a sovrascrivere
-la secretary :
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/api/](https://geopic.flaminiovilla.it/api/category)secretary/update |
-|                                                                       |
-| INPUT Come nel caso dell'inserimento ma specificando l'id             |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PutMapping(\"/update\")                                             |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public Secretary update(\@RequestBody SecretaryDTO secretaryDTO)      |
-+-----------------------------------------------------------------------+
-
+```
+POST https://geopic.flaminiovilla.it/api/secretary/update
+INPUT Come nel caso dell’inserimento ma specificando l’id
+```
+```
+@PutMapping("/update")
+@ResponseBody
+public Secretary update(@RequestBody SecretaryDTO secretaryDTO)
+```
 Elimina dato un id (Se presente) :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/api/](https://geopic.flaminiovilla.it/api/category)secretary/delete |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE 200                                                          |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/secretary/delete
+INPUT {"id": 1 }
+RESPONSE 200
+```
+```
+@DeleteMapping("/delete")
+public Boolean delete(@RequestBody SecretaryDTO secretaryDTO)
+```
 
-+-----------------------------------------------------------------------+
-| \@DeleteMapping(\"/delete\")                                          |
-|                                                                       |
-| public Boolean delete(\@RequestBody SecretaryDTO secretaryDTO)        |
-+-----------------------------------------------------------------------+
+**Structure**
 
-##### Structure
-
-La classe **Structure** è l'entità principale, contiene infatti tutti
-dati di una struttura convenzionata da esporre sulla piattaforma,
-analizziamola per ultimo , dopo aver già analizzato tutte le entity che
-contiene:
-
-sono gestite da due diversi @**RestController**
-
-[StructureController :]{.ul}
-
+La classe Structure è l’entità principale, contiene infatti tutti dati di una struttura
+convenzionata da esporre sulla piattaforma, analizziamola per ultimo , dopo aver già
+analizzato tutte le entity che contiene:
+sono gestite da due diversi @RestController
+StructureController :
 Restituisce un json contenente tutte le structure presenti :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovill                                          |
-| a.it/](https://geopic.flaminiovilla.it/api/category)structure/findAll |
-|                                                                       |
-| RESPONSE \[{                                                          |
-|                                                                       |
-| \"id\": 30,\"name\": \"Geopic\",\"macroCategory\": \"Sanitaria\",     |
-|                                                                       |
-| \"category\": {\"id\": 1,\"name\": \"GEOPIC\",\"color\":              |
-| \"#ffff00\"},                                                         |
-|                                                                       |
-| \"description\": \"Geopic\",\"logo\": \"",\"discount\":               |
-| 90,\"distance\": **null**,                                            |
-|                                                                       |
-| \"expireDateConvention\": \"2050/12/12\",\"email\":                   |
-| \"\...\",\"phone\": \"\...\",                                         |
-|                                                                       |
-| \"website\": \"https://www.geopic.com\",                              |
-|                                                                       |
-| \"address\": \"via sandro sandri 71, 00184 Roma RM, Italy\",          |
-|                                                                       |
-| \"latitude\": 41.887701387610505,                                     |
-|                                                                       |
-| \"longitude\": 12.496582779052002,                                    |
-|                                                                       |
-| \"secretary\": {\"id\": 2,\"name\": \"Elis\",\"address\": \"via       |
-| sandro sandri 71\",                                                   |
-|                                                                       |
-| \"email\": \"elis\@elis.it\",\"phone\": \"\...\",                     |
-|                                                                       |
-| \"region\": {\"id\": 7,\"name\": \"Lazio\" }                          |
-|                                                                       |
-| },                                                                    |
-|                                                                       |
-| \"referralPerson\": {                                                 |
-|                                                                       |
-| \"id\": 2,                                                            |
-|                                                                       |
-| \"email\": \"calinvasileandrei\@gmail.com\",                          |
-|                                                                       |
-| \"name\": \"Andrei\",                                                 |
-|                                                                       |
-| \"surname\": \"Calin\",                                               |
-|                                                                       |
-| \"phone\": \"3775093443\",                                            |
-|                                                                       |
-| \"secretary\": {                                                      |
-|                                                                       |
-| \"id\": 2,                                                            |
-|                                                                       |
-| \"name\": \"Elis\",                                                   |
-|                                                                       |
-| \"address\": \"via sandro sandri 71\",                                |
-|                                                                       |
-| \"email\": \"elis\@elis.it\",                                         |
-|                                                                       |
-| \"phone\": \"0.0\",                                                   |
-|                                                                       |
-| \"region\": {\"id\": 7, \"name\": \"Lazio\"                           |
-|                                                                       |
-| }},\"region\": {\"id\": 7,\"name\": \"Lazio\"}                        |
-|                                                                       |
-| }, \"geoPoint\": {                                                    |
-|                                                                       |
-| \"longitude\": 12.496582779052002,                                    |
-|                                                                       |
-| \"latitude\": 41.887701387610505                                      |
-|                                                                       |
-| }                                                                     |
-|                                                                       |
-| },}, ... \]                                                           |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/structure/findAll
+RESPONSE [{
+"id": 30 ,"name": "Geopic","macroCategory": "Sanitaria",
+"category": {"id": 1 ,"name": "GEOPIC","color": "#ffff00"},
+"description": "Geopic","logo": "”,"discount": 90 ,"distance": null ,
+"expireDateConvention": "2050/12/12","email": "...","phone": "...",
+"website": "https://www.geopic.com",
+"address": "via sandro sandri 71, 00184 Roma RM, Italy",
+"latitude": 41.887701387610505,
+"longitude": 12.496582779052002,
+"secretary": {"id": 2 ,"name": "Elis","address": "via sandro sandri 71",
+"email": "elis@elis.it","phone": "...",
+"region": {"id": 7 ,"name": "Lazio" }
+},
+"referralPerson": {
+"id": 2 ,
+"email": "calinvasileandrei@gmail.com",
+"name": "Andrei",
+"surname": "Calin",
+"phone": "3775093443",
+"secretary": {
+"id": 2 ,
+"name": "Elis",
+"address": "via sandro sandri 71",
+"email": "elis@elis.it",
+"phone": "0.0",
+"region": {"id": 7 , "name": "Lazio"
+}},"region": {"id": 7 ,"name": "Lazio"}
+}, "geoPoint": {
+"longitude": 12.496582779052002,
+"latitude": 41.887701387610505
+}
+},}, ... ]
+```
 
-+-----------------------------------------------------------------------+
-| \@GetMapping(\"/findAll\")                                            |
-|                                                                       |
-| List\<Secretary> findAll()                                            |
-+-----------------------------------------------------------------------+
+```
+@GetMapping("/findAll")
+List<Secretary> findAll()
+```
+Ricerca dato un id e restituisce la structure corrispondente in formato json.
 
-Ricerca dato un id e restituisce la structure corrispondente in formato
-json.
+```
+POST https://geopic.flaminiovilla.it/structure/findById
+INPUT {"id": 1 }
+RESPONSE {"id": 1,"email": "","name": "","phone": "","address": "","regionId": }
+```
+```
+@PostMapping("/findById")
+StructureDateDTO findById(@RequestBody StructureDTO structureDTO)
+```
+Restituisco tutte le structure che sono di una determinata macro categoria e contengono la
+posizione (ESEMPIO roma ) all'interno del campo indirizzo dopo /.
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla                                         |
-| .it/](https://geopic.flaminiovilla.it/api/category)structure/findById |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE {\"id\": 1,\"email\": \"\",\"name\": \"\",\"phone\":         |
-| \"\",\"address\": \"\",\"regionId\": }                                |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/structure/findSection/{search}
+INPUT {"macroCategory":"Convenzioni Commerciali"}
+```
+```
+@PostMapping("/findSection/{search}")
+List<StructureDateDTO> findSection(@PathVariable("search") String search,
+@RequestBody StructureDTO structureDTO)
+```
+Restituisco tutte le structure che sono di una determinata macro categoria e località.
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findById\")                                          |
-|                                                                       |
-| StructureDateDTO findById(\@RequestBody StructureDTO structureDTO)    |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/structure/findSection
+INPUT {"macroCategory":"Convenzioni Commerciali","location":"roma"}
+```
+```
+@PostMapping("/findSection")
+List<StructureDateDTO> findSection(@RequestBody StructureDTO structureDTO)
+```
+Grazie all'algoritmo di ricerca delle structure , analizzato precedentemente, dato un punto
+geografico ed una distanza in km , effettua la ricerca delle strutture comprese in questa
+distanza
 
-Restituisco tutte le structure che sono di una determinata macro
-categoria e contengono la posizione (ESEMPIO roma ) all\'interno del
-campo indirizzo dopo / .
+```
+POST https://geopic.flaminiovilla.it/structure/findStructuresNearGeoLocation
+INPUT {
+"latitude":38.9027885,
+"longitude":16.5944429,
+"distance": 6
+}
+```
+```
+@PostMapping("/findStructuresNearGeoLocation")
+List<StructureDateDTO> findStructuresNearGeoLocation(@RequestBody
+StructureDTO structureDTO)
+```
+Data la posizione per cui si vogliono avere le structure restituisce una lista di strutture
+divise per macro categorie.
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/](https:                             |
-| //geopic.flaminiovilla.it/api/category)structure/findSection/{search} |
-|                                                                       |
-| INPUT *{\"macroCategory\":\"Convenzioni Commerciali\"}*               |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/structure/findAllByCategory
+INPUT {
+"location":"catanzaro",
+"category":"farmacia"
+}
+```
+```
+@PostMapping("/findAllByCategory")
+List<StructureDateDTO> findAllByCategory(@RequestBody StructureDTO
+structureDTO)
+```
+Restituisce tutte le structure che contengono _"location"_ all'interno dell'indirizzo
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findSection/{search}\")                              |
-|                                                                       |
-| List\<StructureDateDTO> findSection(\@PathVariable(\"search\") String |
-| search, \@RequestBody StructureDTO structureDTO)                      |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/structure/findAllStructuresByLocation
+INPUT {
+"location":"catanzaro"
+}
+```
+```
+@PostMapping("/findAllStructuresByLocation")
+String findAllStructuresByLocation(@RequestBody StructureDTO structureDTO)
+```
+Data la _"location"_ restituisce i customMarker di quella località:
 
-Restituisco tutte le structure che sono di una determinata macro
-categoria e località.
+```
+POST https://geopic.flaminiovilla.it/structure/markers
+RESPONSE {
+"id": 39 ,
+"name": "Geopic",
+"latitude": 38.89357180922953,
+"longitude": 16.587004309020646,
+"category": {
+"id": 1 ,
+"color": "#ffff00",
+"name": "GEOPIC" }}
+```
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it                                      |
-| /](https://geopic.flaminiovilla.it/api/category)structure/findSection |
-|                                                                       |
-| INPUT *{\"macroCategory\":\"Convenzioni                               |
-| Commerciali\",\"location\":\"roma\"}*                                 |
-+-----------------------------------------------------------------------+
 
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findSection\")                                       |
-|                                                                       |
-| List\<StructureDateDTO> findSection(\@RequestBody StructureDTO        |
-| structureDTO)                                                         |
-+-----------------------------------------------------------------------+
+```
+@PostMapping("/markers")
+@ResponseBody
+public List<MarkerStructureDTO> markers(@RequestBody StructureDTO
+structureDTO)
+```
+Ricerca dentro il db le structure che contengono le parole cercate nel nome, data una
+localita'.
 
-Grazie all\'algoritmo di ricerca delle structure , analizzato
-precedentemente, dato un punto geografico ed una distanza in km ,
-effettua la ricerca delle strutture comprese in questa distanza
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/](https://geopic.                    |
-| flaminiovilla.it/api/category)structure/findStructuresNearGeoLocation |
-|                                                                       |
-| INPUT *{*                                                             |
-|                                                                       |
-| *\"latitude\":38.9027885,*                                            |
-|                                                                       |
-| *\"longitude\":16.5944429,*                                           |
-|                                                                       |
-| *\"distance\": 6*                                                     |
-|                                                                       |
-| *}*                                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findStructuresNearGeoLocation\")                     |
-|                                                                       |
-| List\<StructureDateDTO> findStructuresNearGeoLocation(\@RequestBody   |
-| StructureDTO structureDTO)                                            |
-+-----------------------------------------------------------------------+
-
-Data la posizione per cui si vogliono avere le structure restituisce una
-lista di strutture divise per macro categorie .
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/](htt                                |
-| ps://geopic.flaminiovilla.it/api/category)structure/findAllByCategory |
-|                                                                       |
-| INPUT *{*                                                             |
-|                                                                       |
-| *\"location\":\"catanzaro\",*                                         |
-|                                                                       |
-| *\"category\":\"farmacia\"*                                           |
-|                                                                       |
-| *}*                                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findAllByCategory\")                                 |
-|                                                                       |
-| List\<StructureDateDTO> findAllByCategory(\@RequestBody StructureDTO  |
-| structureDTO)                                                         |
-+-----------------------------------------------------------------------+
-
-Restituisce tutte le structure che contengono *\"location\"*
-all\'interno dell\'indirizzo
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/](https://geopi                      |
-| c.flaminiovilla.it/api/category)structure/findAllStructuresByLocation |
-|                                                                       |
-| INPUT *{*                                                             |
-|                                                                       |
-| *\"location\":\"catanzaro\"*                                          |
-|                                                                       |
-| *}*                                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/findAllStructuresByLocation\")                       |
-|                                                                       |
-| String findAllStructuresByLocation(\@RequestBody StructureDTO         |
-| structureDTO)                                                         |
-+-----------------------------------------------------------------------+
-
-Data la *\"location\"* restituisce i customMarker di quella località:
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovill                                          |
-| a.it/](https://geopic.flaminiovilla.it/api/category)structure/markers |
-|                                                                       |
-| RESPONSE *{*                                                          |
-|                                                                       |
-| *\"id\": 39,*                                                         |
-|                                                                       |
-| *\"name\": \"Geopic\",*                                               |
-|                                                                       |
-| *\"latitude\": 38.89357180922953,*                                    |
-|                                                                       |
-| *\"longitude\": 16.587004309020646,*                                  |
-|                                                                       |
-| *\"category\": {*                                                     |
-|                                                                       |
-| *\"id\": 1,*                                                          |
-|                                                                       |
-| *\"color\": \"#ffff00\",*                                             |
-|                                                                       |
-| *\"name\": \"GEOPIC\" }}*                                             |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/markers\")                                           |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public List\<MarkerStructureDTO> markers(\@RequestBody StructureDTO   |
-| structureDTO)                                                         |
-+-----------------------------------------------------------------------+
-
-Ricerca dentro il db le structure che contengono le parole cercate nel
-nome, data una localita\' .
-
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.it/](h                                  |
-| ttps://geopic.flaminiovilla.it/api/category)structure/search/{search} |
-|                                                                       |
-| INPUT *{*                                                             |
-|                                                                       |
-| *\"location\":\"catanzaro\"*                                          |
-|                                                                       |
-| *}*                                                                   |
-+-----------------------------------------------------------------------+
-
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/search/{search}\")                                   |
-|                                                                       |
-| List\<StructureDateDTO>                                               |
-| findStructureByContainsLetters(\@PathVariable(\"search\") String      |
-| search, \@RequestBody StructureDTO structureDTO)                      |
-+-----------------------------------------------------------------------+
-
-[StructureCRUDController :]{.ul}
+```
+POST https://geopic.flaminiovilla.it/structure/search/{search}
+INPUT {
+"location":"catanzaro"
+}
+```
+```
+@PostMapping("/search/{search}")
+List<StructureDateDTO> findStructureByContainsLetters(@PathVariable("search")
+String search, @RequestBody StructureDTO structureDTO)
+```
+StructureCRUDController :
 
 Elimina dato un id (Se presente) :
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/api/](https://geopic.flaminiovilla.it/api/category)structure/delete |
-|                                                                       |
-| INPUT {\"id\": 1}                                                     |
-|                                                                       |
-| RESPONSE 200                                                          |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/structure/delete
+INPUT {"id": 1 }
+RESPONSE 200
+```
+```
+DeleteMapping("/delete")
+public Boolean delete(@RequestBody StructureDTO structureDTO)
+```
+Crea una nuova structure e se l’inserimento va a buon fine la restituisce in formato json
 
-+-----------------------------------------------------------------------+
-| DeleteMapping(\"/delete\")                                            |
-|                                                                       |
-| public Boolean delete(\@RequestBody StructureDTO structureDTO)        |
-+-----------------------------------------------------------------------+
+```
+POST https://geopic.flaminiovilla.it/api/structure/create
+INPUT
+{
+"name" : "", "macroCategory" : "", "description" : "", "discount" : ,
+"expireDateConvention" : "", "email" : "", "phone" : "", "website" : "",
+"address" : "", "latitude" "", "longitude" "", "categoryId" : 1 ,
+"referralPersonId" : 1 , "secretaryId" : 1 ,
+}
+RESPONSE come INPUT + ID
+```
+```
+@PostMapping("/create")
+@ResponseBody
+public Structure create(@RequestBody StructureDTO structureDTO)
+```
 
-Crea una nuova structure e se l'inserimento va a buon fine la
-restituisce in formato json
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/api/](https://geopic.flaminiovilla.it/api/category)structure/create |
-|                                                                       |
-| INPUT                                                                 |
-|                                                                       |
-| {                                                                     |
-|                                                                       |
-| \"name\" : \"\", \"macroCategory\" : \"\", \"description\" : \"\",    |
-| \"discount\" : , \"expireDateConvention\" : \"\", \"email\" : \"\",   |
-| \"phone\" : \"\", \"website\" : \"\", \"address\" : \"\",             |
-| \"latitude\" \"\", \"longitude\" \"\", \"categoryId\" : 1,            |
-| \"referralPersonId\" : 1, \"secretaryId\" : 1 ,                       |
-|                                                                       |
-| }                                                                     |
-|                                                                       |
-| RESPONSE come INPUT + ID                                              |
-+-----------------------------------------------------------------------+
-| \@PostMapping(\"/create\")                                            |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public Structure create(\@RequestBody StructureDTO structureDTO)      |
-+-----------------------------------------------------------------------+
+Specificando l'id , e modificando eventuali campi vado a sovrascrivere la structure :
 
-Specificando l\'id , e modificando eventuali campi vado a sovrascrivere
-la structure :
+```
+POST https://geopic.flaminiovilla.it/api/structure/update
+INPUT Come nel caso dell’inserimento ma specificando l’id
+```
+```
+@PutMapping("/update")
+@ResponseBody
+public Structure update(@RequestBody StructureDTO structureDTO)
+```
+Tutte le **API** sono state testate con **Postman** (https://www.postman.com/) , di seguito riporto il link
 
-+-----------------------------------------------------------------------+
-| POST                                                                  |
-| [https://geopic.flaminiovilla.i                                       |
-| t/api/](https://geopic.flaminiovilla.it/api/category)structure/update |
-|                                                                       |
-| INPUT Come nel caso dell'inserimento ma specificando l'id             |
-+-----------------------------------------------------------------------+
+per importare i test relativi a tutte le singole api sopra descritte:
 
-+-----------------------------------------------------------------------+
-| \@PutMapping(\"/update\")                                             |
-|                                                                       |
-| \@ResponseBody                                                        |
-|                                                                       |
-| public Structure update(\@RequestBody StructureDTO structureDTO)      |
-+-----------------------------------------------------------------------+
+E’ possibile scaricare le collection di postman dal seguente link:
+https://polimi365-my.sharepoint.com/:u:/g/personal/10713791_polimi_it/EXycM3PA4qlMk5Qt-B4tnYYB_pxAeeznYR4Ogh1TgUE42g?e=hCdoWJ
+
+```
+Per accedere ad alcune api, è necessaria
+l’autenticazione occorre quindi effettuare prima il
+login e successivamente includere il token nella
+richiesta, esempio:
+Authorization + Bearer eyJhbGciOiJIUzUxMiJ9....
+```
 
 ##### Tutte le API sono state testate con Postman ([[https://www.postman.com/]{.ul}](https://www.postman.com/)) , di seguito riporto il link per importare i test relativi a tutte le singole api sopra descritte:
 
-![](./media/image45.png){width="6.267716535433071in"
-height="1.3888888888888888in"}![](./media/image46.png){width="6.267716535433071in"
-height="0.4861111111111111in"}
-
+![](./media/image45.png)![](./media/image46.png)
 E' possibile scaricare le collection di postman dal seguente link:
 
   -------------------------------------------------------------------------------------------------------------------------------
@@ -2952,16 +2479,14 @@ https://polimi365-my.sharepoint.com/:u:/g/personal/10713791_polimi_it/EXycM3PA4q
 
   -------------------------------------------------------------------------------------------------------------------------------
 
-![](./media/image47.png){width="2.7031255468066493in"
-height="3.099187445319335in"}
-
+![](./media/image47.png)
 Per accedere ad alcune api, è necessaria l'autenticazione occorre quindi
 effettuare prima il login e successivamente includere il token nella
 richiesta, esempio:
 
 Authorization + Bearer eyJhbGciOiJIUzUxMiJ9....
 
-**5.7 TESTING**
+##5.7 TESTING
 
 Il testing sfrutta le classi di SpringBootTest e la piattaforma JUnit 5,
 I Test d'integrazione per l'applicazione sono contenuti all'interno del
@@ -3022,13 +2547,10 @@ I controlli implementati sono:
 
 La struttura dei test è la seguente:
 
-![](./media/image48.png){width="5.598958880139983in"
-height="2.6041666666666665in"}
+![](./media/image48.png)
 
 **REPORT DI
-TESTING:**![](./media/image49.png){width="2.9741469816272965in"
-height="4.318840769903762in"}
-
+TESTING:**![](./media/image49.png)
 Essendo molto vasta la struttura sono riportati i test dei punti critici
 principali del sistema:
 
@@ -3052,12 +2574,12 @@ che risponda come previsto.
 
 Analizziamo di seguito l\'utilità delle varie classi di test.
 
-**[GeoHashTest]{.ul}**
+**[GeoHashTest]**
 
 Controlla che l'operazione di hashing di latitudine e longitudine,
 specificando la precisione dei bit, avvenga correttamente.
 
-**[GeoPointTest]{.ul}**
+**[GeoPointTest]**
 
 Crea diversi **GeoPoint** e successivamente associa i valori
 corrispondenti, creandone delle copie e verificando che il processo di
@@ -3065,13 +2587,13 @@ confronto vada a buon fine.
 
 Inoltre viene effettuato il test dell'algoritmo di VincentyGeodesy.
 
-**[BoundingBoxTest]{.ul}**
+**[BoundingBoxTest]**
 
 Definite delle **BoundingBox** verifico se contengono dei **GeoPoint**,
 definiti internamente secondo specifiche criticità, per esempio punti
 molto esterni o molto vicini al centro della **BoundingBox.**
 
-**[GeoHashCircleQueryTest]{.ul}**
+**[GeoHashCircleQueryTest]**
 
 Dati dei **GeoPoint** ed un raggio crea una approssimazione di un
 cerchio in quadrato, che corrisponderà poi ad una B**oundingBox**
@@ -3081,13 +2603,13 @@ In alcuni punti è precedentemente è stata calcolata la distanza relativa
 grazie a google maps, e successivamente è stata effettuata la verifica
 della distanza calcolata mediante l'algoritmo di VincentyGeodesy.
 
-**[PersonRestControllerTest]{.ul}**
+**[PersonRestControllerTest]**
 
 Tramite assertSuccessfulPersonRequest verifico se tutti i parametri
 vengono trasmessi correttamente, e se il token viene aggiunto
 correttamente nell Header.
 
-**[AuthenticationRestControllerTest]{.ul}**
+**[AuthenticationRestControllerTest]**
 
 Esegue dei test relativi l'accesso:
 
@@ -3101,88 +2623,62 @@ Esegue dei test relativi l'accesso:
 
 5.  unsuccessfulAuthenticationWithNotExistingUser
 
-**[UserRestControllerTest]{.ul}**
+**[UserRestControllerTest]**
 
 Provo a risalire all'utente loggato, estraendo il token dall'Header
 della request.
 
-**[LogInUtils]{.ul}**
+**[LogInUtils]**
 
 Effettuo il test della generazione del token con getTokenForLogin e ne
 controllo la validità.
 
-**5.8 Docker**
+## 5 .8 Docker
 
-**Docker** è uno strumento progettato per semplificare la creazione, la
-distribuzione e l\'esecuzione di applicazioni utilizzando i
-**container**.
+Docker è uno strumento progettato per semplificare la creazione, la distribuzione e
+l'esecuzione di applicazioni utilizzando i container.
+I container consentono di creare un pacchetto di un'applicazione con tutte le parti di cui ha
+bisogno, e distribuirla come un unico pacchetto. In questo modo, grazie al container,
+l'applicazione verrà eseguita su macchina Linux.
+Per effettuare il deploy di Geopic grazie a docker compose si unisce mariadb con l’app
+spring.
+Compose è uno strumento per la definizione e l'esecuzione di applicazioni Docker multi-
+container, si utilizza un file YAML per configurare i servizi per l’ applicazione. L'utilizzo di
+**Compose** è fondamentalmente un processo in tre fasi: Definizione dell'ambiente della applicazione
+con un in Dockerfile in modo che possa essere riprodotta ovunque.Definizione dei servizi che la
+compongono in docker-compose.yml per essere eseguiti insieme in un ambiente isolato.
 
-I **container** consentono di creare un pacchetto di un\'applicazione
-con tutte le parti di cui ha bisogno, e distribuirla come un unico
-pacchetto. In questo modo, grazie al **container**, l\'applicazione
-verrà eseguita su macchina Linux.
+1. Esecuzione di **docker compose up --build** ( il comando di composizione Docker avvia ed
+   esegue l'intera app).
 
-Per effettuare il deploy di Geopic grazie a **docker compose** si unisce
-mariadb con l'app spring.
+# Contenuto del docker-compose.yml :
 
-**Compose** è uno strumento per la definizione e l\'esecuzione di
-applicazioni Docker multi-container, si utilizza un file YAML per
-configurare i servizi per l' applicazione. L\'utilizzo di **Compose** è
-fondamentalmente un processo in tre fasi: Definizione dell\'ambiente
-della applicazione con un in Dockerfile in modo che possa essere
-riprodotta ovunque.Definizione dei servizi che la compongono in
-docker-compose.yml per essere eseguiti insieme in un ambiente isolato.
+```
+version: '3.1'
+services:
+database:
+image: mariadb
+restart: always
+environment:
+MYSQL_ROOT_PASSWORD: ---------@
+volumes:
 
-1.  Esecuzione di **[docker compose up \--build]{.ul}** ( il [comando di
-    composizione Docker](https://docs.docker.com/compose/cli-command/)
-    avvia ed esegue l\'intera app).
-
-Contenuto del **docker-compose.yml** :
-
-+-----------------------------------------------------------------------+
-| version: \'3.1\'                                                      |
-|                                                                       |
-| services:                                                             |
-|                                                                       |
-| database:                                                             |
-|                                                                       |
-| image: mariadb                                                        |
-|                                                                       |
-| restart: always                                                       |
-|                                                                       |
-| environment:                                                          |
-|                                                                       |
-| MYSQL_ROOT_PASSWORD: \-\-\-\-\-\-\-\--@                               |
-|                                                                       |
-| volumes:                                                              |
-|                                                                       |
-| \- /home/ubuntu/docker/geopic:/var/lib/mysql                          |
-|                                                                       |
-| ports:                                                                |
-|                                                                       |
-| \- 3309:3306                                                          |
-|                                                                       |
-| backend:                                                              |
-|                                                                       |
-| depends_on:- database                                                 |
-|                                                                       |
-| build: .                                                              |
-|                                                                       |
-| restart: always                                                       |
-|                                                                       |
-| command:                                                              |
-|                                                                       |
-| java -jar /app.jar                                                    |
-|                                                                       |
-| \--spring.datasource.url=\"jdbc:mariadb://database/g                  |
-| eopic?createDatabaseIfNotExist=true&autoReconnect=true&useSSL=false\" |
-|                                                                       |
-| \--spring.datasource.password=\"\-\-\-\-\-\-\-\--@\"                  |
-|                                                                       |
-| ports:                                                                |
-|                                                                       |
-| \- 5001:8080                                                          |
-+-----------------------------------------------------------------------+
+- /home/ubuntu/docker/geopic:/var/lib/mysql
+  ports:
+- 3309 : 3306
+  backend:
+  depends_on:- database
+  build:.
+  restart: always
+  command:
+  java -jar /app.jar
+  --
+  spring.datasource.url="jdbc:mariadb://database/geopic?createDatabaseIfNotExis
+  t=true&autoReconnect=true&useSSL=false"
+  --spring.datasource.password="---------@"
+  ports:
+- 5001 : 8080
+```
 
 **6 Conclusioni**
 
@@ -3220,13 +2716,12 @@ Team di sviluppo o l'interazione di più Team nel caso di progetti di
 grandi dimensioni formati da sviluppatori backend, frontend, designer
 ecc.
 
-![](./media/image50.png){width="5.042458442694663in" height="3.5in"}
+![](./media/image50.png)
 
 I sorgenti sia della parte front end che della parte backend sono
 pubblici sui nostri github:
 
-Back-end![](./media/image51.png){width="1.3583333333333334in"
-height="0.7638888888888888in"}
+Back-end![](./media/image51.png)
 
 <https://github.com/villaflaminio/geopic.git>
 
@@ -3237,14 +2732,12 @@ Front-end
 E' anche possibile scaricare in formato .zip i sorgenti e l'APK
 (Disponibile per android)
 
-![](./media/image52.png){width="0.23680555555555555in"
-height="0.2125in"}
+![](./media/image52.png)
 
 [Link
 Drive](https://drive.google.com/drive/folders/1nLddSE-cNAg9Fj6zxkKhnKQ94jkr6Awz?usp=sharing)
 
-![](./media/image53.png){width="0.30277777777777776in"
-height="0.30277777777777776in"}
+![](./media/image53.png)
 
 [Link Video](https://youtu.be/1a3FBhnKKfU)
 
